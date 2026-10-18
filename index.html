@@ -1,0 +1,2653 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>SEVEN ONE — Premium Digital Hardware & Software Subscriptions</title>
+<meta name="description" content="Verified software licenses, AI subscriptions, and cloud vaults with instant escrow fulfillment. Zero hidden fees."/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "onyx-base": "#090a0f",
+        "onyx-surface": "#0e1017",
+        "onyx-high": "#161822",
+        "onyx-card": "#12141d",
+        "primary": "#d4af37",
+        "primary-light": "#f2ca50",
+        "primary-container": "#d4af37",
+        "on-primary": "#241a00",
+        "crimson": "#ef4444",
+        "crimson-dark": "#dc2626",
+        "crimson-container": "#a40217",
+        "surface": "#0e1017",
+        "surface-container": "#151722",
+        "surface-container-high": "#1e212f",
+        "surface-container-low": "#0b0c12",
+        "surface-container-lowest": "#06070a",
+        "surface-container-highest": "#34343a",
+        "outline": "#99907c",
+        "outline-variant": "#4d4635",
+        "on-surface": "#f1f3fa",
+        "on-surface-variant": "#babfcb",
+        "tertiary": "#ffc37b"
+      },
+      fontFamily: {
+        sans: ["Plus Jakarta Sans", "sans-serif"]
+      }
+    }
+  }
+}
+</script>
+<style>
+html { scroll-behavior: smooth; background-color: #090a0f; }
+@layer base {
+  body { margin: 0; padding: 0; overscroll-behavior-y: none; }
+}
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: #090a0f; }
+::-webkit-scrollbar-thumb { background: #2a2517; border-radius: 9999px; border: 1px solid rgba(212,175,55,0.25); }
+::-webkit-scrollbar-thumb:hover { background: #d4af37; }
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(1deg); }
+  50% { transform: translateY(-10px) rotate(-1deg); }
+}
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-7px) rotate(-0.5deg); }
+}
+@keyframes shimmerSlide {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 12px rgba(212,175,55,0.15), inset 0 0 8px rgba(212,175,55,0.1); }
+  50% { box-shadow: 0 0 24px rgba(212,175,55,0.35), inset 0 0 14px rgba(212,175,55,0.2); }
+}
+@keyframes ambientPulse {
+  0%, 100% { opacity: 0.9; box-shadow: 0 0 10px rgba(242,202,80,0.25); }
+  50% { opacity: 1; box-shadow: 0 0 20px rgba(242,202,80,0.55); }
+}
+@keyframes crimsonGlow {
+  0%, 100% { box-shadow: 0 0 8px rgba(239,68,68,0.35); }
+  50% { box-shadow: 0 0 18px rgba(239,68,68,0.7); }
+}
+@keyframes fadeIn {
+  from { opacity: 0.85; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float-card { animation: floatSlow 6s ease-in-out infinite; }
+.animate-float-subcard { animation: floatGentle 5s ease-in-out infinite 1s; }
+.shimmer-bar {
+  background: linear-gradient(90deg, rgba(164,2,23,0.2) 0%, rgba(212,175,55,0.25) 50%, rgba(164,2,23,0.2) 100%);
+  background-size: 200% 100%;
+  animation: shimmerSlide 8s linear infinite;
+}
+.animate-ambient-glow { animation: ambientPulse 3s infinite ease-in-out; }
+.animate-crimson-pulse { animation: crimsonGlow 2.5s infinite ease-in-out; }
+
+@keyframes emeraldGlow {
+  0%, 100% { box-shadow: 0 0 8px rgba(16, 185, 129, 0.3); }
+  50% { box-shadow: 0 0 16px rgba(16, 185, 129, 0.65); }
+}
+.animate-emerald-pulse { animation: emeraldGlow 2.5s infinite ease-in-out; }
+
+.glow-card-pulse { animation: pulseGlow 4s infinite ease-in-out; }
+
+.tactile-btn { transition: transform 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease; }
+.tactile-btn:hover { transform: translateY(-1px) scale(1.015); }
+.tactile-btn:active { transform: translateY(1px) scale(0.96); }
+
+.product-card-tactile { transition: transform 0.28s cubic-bezier(0.2,0.8,0.2,1), border-color 0.28s ease, box-shadow 0.28s ease; }
+.product-card-tactile:hover { transform: translateY(-6px); border-color: rgba(242,202,80,0.45); box-shadow: 0 22px 42px -6px rgba(0,0,0,0.85), 0 0 24px -2px rgba(212,175,55,0.22); }
+
+details summary::-webkit-details-marker { display: none; }
+details[open] summary .faq-icon { transform: rotate(180deg); }
+
+.page-section { animation: fadeIn 0.3s ease-out; }
+
+/* Prevent body scroll when mobile nav is at bottom */
+.page-content { padding-bottom: env(safe-area-inset-bottom, 0); }
+
+/* Search modal */
+.search-overlay { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+
+/* Toast notification */
+.toast {
+  animation: fadeIn 0.3s ease-out, fadeOut 0.3s ease-out 2.2s forwards;
+}
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateY(-12px); }
+}
+
+/* ==================== iOS 26 LIQUID GLASS SYSTEM ==================== */
+.liquid-canvas-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.liquid-blob {
+  position: absolute;
+  filter: blur(110px);
+  opacity: 0.32;
+  mix-blend-mode: screen;
+  will-change: transform, border-radius;
+  animation: morphBlob 18s ease-in-out infinite alternate;
+}
+.liquid-blob-1 {
+  top: -12%;
+  left: 18%;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.45) 0%, rgba(242, 202, 80, 0.18) 45%, transparent 70%);
+  animation-duration: 18s;
+}
+.liquid-blob-2 {
+  top: 38%;
+  right: -8%;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.38) 0%, rgba(164, 2, 23, 0.16) 45%, transparent 70%);
+  animation-duration: 22s;
+  animation-delay: -6s;
+}
+.liquid-blob-3 {
+  bottom: 8%;
+  left: 22%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, rgba(147, 51, 234, 0.16) 45%, transparent 70%);
+  animation-duration: 20s;
+  animation-delay: -11s;
+}
+
+@keyframes morphBlob {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  33% {
+    border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+    transform: translate(45px, -35px) scale(1.12) rotate(60deg);
+  }
+  66% {
+    border-radius: 70% 30% 50% 50% / 30% 40% 60% 70%;
+    transform: translate(-35px, 45px) scale(0.92) rotate(120deg);
+  }
+  100% {
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+    transform: translate(25px, -25px) scale(1.06) rotate(180deg);
+  }
+}
+
+/* iOS 26 Liquid Glass Surface */
+.liquid-glass-surface {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.015) 100%),
+              rgba(14, 16, 23, 0.72) !important;
+  backdrop-filter: blur(28px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 
+    0 24px 48px -8px rgba(0, 0, 0, 0.75),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.5) !important;
+  position: relative;
+}
+
+/* Liquid Sheen Shimmer reflection */
+.liquid-glass-surface::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.16),
+    rgba(212, 175, 55, 0.07) 30%,
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.liquid-glass-surface:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced liquid glass product cards with refraction */
+.product-card-tactile {
+  background: linear-gradient(145deg, rgba(22, 24, 34, 0.76) 0%, rgba(14, 16, 23, 0.88) 100%) !important;
+  backdrop-filter: blur(26px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(26px) saturate(210%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.13) !important;
+  box-shadow: 
+    0 18px 40px -6px rgba(0, 0, 0, 0.8),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6) !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+}
+
+.product-card-tactile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.16),
+    rgba(212, 175, 55, 0.09) 32%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.product-card-tactile:hover {
+  transform: translateY(-8px) scale(1.015) !important;
+  border-color: rgba(242, 202, 80, 0.55) !important;
+  box-shadow: 
+    0 30px 60px -8px rgba(0, 0, 0, 0.9),
+    0 0 32px -4px rgba(212, 175, 55, 0.35),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.5) !important;
+}
+.product-card-tactile:hover::before {
+  opacity: 1;
+}
+
+/* Liquid Pill Badges */
+.liquid-glass-badge {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.32), 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Floating glass hero slabs */
+.animate-float-card, .animate-float-subcard {
+  backdrop-filter: blur(28px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(22, 24, 34, 0.78) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.85), inset 0 1px 1.5px rgba(255, 255, 255, 0.35) !important;
+}
+
+#desktop-nav {
+  backdrop-filter: blur(24px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+  background: rgba(14, 16, 23, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25), 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+#flashDropBanner {
+  backdrop-filter: blur(20px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+  background: rgba(11, 12, 18, 0.82) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+</style>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+</head>
+<body class="bg-onyx-base font-sans text-on-surface antialiased selection:bg-primary/30 selection:text-primary-light min-h-screen overflow-x-hidden">
+
+<!-- ==================== HEADER ==================== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-onyx-base/80 backdrop-blur-2xl border-b border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.85)]" id="main-header">
+<!-- Top ticker strip -->
+<div class="w-full bg-surface-container-lowest px-4 sm:px-6 py-1.5 border-b border-white/5 overflow-x-hidden">
+<div class="max-w-[1320px] mx-auto flex items-center justify-between text-[11px] sm:text-xs text-on-surface-variant gap-2">
+<div class="flex items-center gap-2 truncate">
+<span class="flex h-2 w-2 relative shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-primary font-bold uppercase tracking-wider text-[10px] sm:text-[11px] shrink-0">Operational</span>
+<span class="text-white/20 hidden sm:inline">•</span>
+<span class="truncate">Live verified stock &amp; instant digital warranty on all eligible licenses — Zero hidden fees</span>
+</div>
+<div class="hidden md:flex items-center gap-4 shrink-0">
+<div class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>
+<span>256-Bit Escrow Vault</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant hover:text-tertiary transition-colors">
+<span class="material-symbols-outlined text-[14px] text-tertiary">bolt</span>
+<span>Instant Fulfillment</span>
+</div>
+<div class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full liquid-glass-badge text-[10px] font-semibold tracking-wide text-cyan-200">
+  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_#38bdf8]"></span>
+  <span>iOS 26 Liquid Glass</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Navigation Bar -->
+<div class="h-16 sm:h-20 w-full px-4 sm:px-6">
+<div class="max-w-[1320px] mx-auto h-full flex items-center justify-between gap-3 sm:gap-4">
+<!-- Brand Logo -->
+<a class="flex items-center gap-2 sm:gap-3 group shrink-0 cursor-pointer" onclick="navigateTo('home')">
+<img src="assets/Sevenone.jpg" alt="SEVEN ONE Logo" class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg object-cover shadow-[inset_1px_1px_2px_rgba(212,175,55,0.35),0_4px_12px_rgba(0,0,0,0.7)] group-hover:border-primary/50 group-hover:scale-105 transition-all border border-primary/25" />
+<div class="flex flex-col">
+<span class="text-lg sm:text-xl font-extrabold tracking-tight leading-none">
+<span class="text-white">SEVEN</span><span class="text-crimson">ONE</span>
+</span>
+<span class="text-outline text-[8px] sm:text-[9px] tracking-widest uppercase font-semibold mt-0.5">Digital Hardware</span>
+</div>
+</a>
+<!-- Desktop Nav Menu -->
+<nav class="hidden md:flex items-center gap-1 p-1 bg-surface-container-lowest rounded-full border border-white/10 shadow-[inset_0_2px_6px_rgba(0,0,0,0.8)]" id="desktop-nav">
+<a class="nav-link px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer" data-page="home" onclick="navigateTo('home')">Home</a>
+<a class="nav-link px-3.5 py-1.5 rounded-full text-xs font-medium text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-page="products" onclick="navigateTo('products')">Products</a>
+<a class="nav-link px-3.5 py-1.5 rounded-full text-xs font-medium text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-page="deals" onclick="navigateTo('deals')">Deals</a>
+<a class="nav-link px-3.5 py-1.5 rounded-full text-xs font-medium text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-page="ai-finder" onclick="navigateTo('ai-finder')">AI Finder</a>
+<a class="nav-link px-3.5 py-1.5 rounded-full text-xs font-medium text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-page="vault" onclick="navigateTo('vault')">Vault</a>
+<a class="nav-link px-3.5 py-1.5 rounded-full text-xs font-medium text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-page="orders" onclick="navigateTo('orders')">Orders</a>
+<a class="nav-link px-3.5 py-1.5 rounded-full text-xs font-medium text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-page="faq" onclick="navigateTo('faq')">FAQ</a>
+</nav>
+<!-- Search & Controls -->
+<div class="flex items-center gap-2 sm:gap-3 shrink-0">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant border border-white/10 hover:border-primary/40 hover:text-on-surface transition-all text-xs" type="button" onclick="openSearchModal()">
+<span class="material-symbols-outlined text-[17px] text-primary">search</span>
+<span class="hidden md:inline text-on-surface-variant/80">Search...</span>
+<kbd class="hidden md:inline px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-outline border border-white/10">⌘K</kbd>
+</button>
+<!-- Balance Pill -->
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container border border-primary/20 shadow-[inset_1px_1px_2px_rgba(212,175,55,0.15)] text-xs">
+<span class="material-symbols-outlined text-primary text-[16px]">account_balance_wallet</span>
+<span class="text-primary font-bold" id="wallet-balance">$128.33</span>
+<button class="w-4 h-4 rounded-full bg-primary text-on-primary flex items-center justify-center hover:scale-110 active:scale-95 transition-transform ml-0.5" title="Add Funds" type="button" onclick="addFunds()">
+<span class="material-symbols-outlined text-[11px] font-bold">add</span>
+</button>
+</div>
+<!-- Orders -->
+<a class="hidden sm:flex w-9 h-9 rounded-full bg-surface-container text-on-surface-variant hover:text-primary items-center justify-center border border-white/10 transition-all hover:scale-105 cursor-pointer" title="Orders" onclick="navigateTo('orders')">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</a>
+<!-- Cart -->
+<a class="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface-container text-on-surface-variant hover:text-primary flex items-center justify-center border border-white/10 transition-all hover:scale-105 cursor-pointer" title="Cart" onclick="navigateTo('cart')">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-crimson text-white text-[10px] flex items-center justify-center font-bold shadow-md" id="cart-badge-header">3</span>
+</a>
+<!-- User Avatar -->
+<a class="w-8 h-8 sm:w-9 sm:h-9 rounded-full p-0.5 bg-surface-container border border-primary/30 flex items-center justify-center hover:border-primary transition-all cursor-pointer" title="Account" onclick="navigateTo('account')">
+<div class="w-full h-full rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</header>
+
+<!-- ==================== SEARCH MODAL ==================== -->
+<div class="fixed inset-0 z-[60] hidden" id="search-modal">
+<div class="absolute inset-0 bg-black/70 search-overlay" onclick="closeSearchModal()"></div>
+<div class="relative max-w-2xl mx-auto mt-24 sm:mt-32 mx-4 sm:mx-auto px-4">
+<div class="rounded-2xl bg-surface-container border border-primary/30 shadow-[0_24px_48px_rgba(0,0,0,0.9)] overflow-hidden">
+<div class="flex items-center gap-3 px-5 py-4 border-b border-white/10">
+<span class="material-symbols-outlined text-primary text-[22px]">search</span>
+<input type="text" id="search-input" class="flex-1 bg-transparent text-on-surface text-base outline-none placeholder:text-outline" placeholder="Search products, deals, categories..." autofocus oninput="handleSearch(this.value)"/>
+<kbd class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] text-outline border border-white/10">ESC</kbd>
+</div>
+<div class="max-h-80 overflow-y-auto p-3" id="search-results">
+<div class="text-center py-8 text-on-surface-variant text-sm">Type to search across all products and categories...</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ==================== TOAST CONTAINER ==================== -->
+<div class="fixed top-24 right-4 z-[70] flex flex-col gap-2" id="toast-container"></div>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="w-full pt-24 sm:pt-28 bg-onyx-base min-h-screen pb-28 md:pb-0" id="main-content">
+<div class="page-section">
+  <!-- FLASH DROP BANNER -->
+  <div class="w-full relative z-30 bg-surface-container-lowest border-b border-white/10 overflow-hidden" id="flashDropBanner">
+    <div class="absolute inset-0 shimmer-bar pointer-events-none opacity-40"></div>
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-2 flex flex-col md:flex-row items-center justify-between gap-2.5 relative z-10">
+      <div class="flex items-center gap-2.5 w-full md:w-auto shrink-0 justify-between md:justify-start">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-950/80 text-red-200 border border-crimson/40 text-[11px] font-bold uppercase tracking-wider shadow-[0_2px_8px_rgba(239,68,68,0.3)]">
+          <span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-crimson opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-crimson"></span></span>
+          <span>Flash Drop & Cloud Credits</span>
+        </div>
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface text-[11px] border border-white/10 font-medium">
+          <span class="material-symbols-outlined text-[13px] text-crimson animate-pulse">timer</span>
+          <span class="text-outline">Ends in:</span>
+          <span class="font-mono font-bold text-primary" id="countdown-timer">02:47:19</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 shrink-0 self-end md:self-auto">
+        <a class="group inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white text-xs font-bold shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_20px_rgba(239,68,68,0.6)] active:scale-95 transition-all cursor-pointer" onclick="navigateTo('deals')">
+          <span class="material-symbols-outlined text-[15px] text-amber-300">local_fire_department</span>
+          <span>Claim Voucher</span>
+          <span class="material-symbols-outlined text-[14px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+        </a>
+        <button class="w-6 h-6 rounded-full bg-surface-container text-outline hover:text-white flex items-center justify-center transition-colors border border-white/10" onclick="document.getElementById('flashDropBanner').remove()" title="Dismiss" type="button">
+          <span class="material-symbols-outlined text-[14px]">close</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="w-full relative px-4 sm:px-6 pt-10 sm:pt-16 pb-16 sm:pb-24 overflow-hidden">
+    <div class="absolute -top-24 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-1/3 right-10 w-96 h-96 bg-crimson/10 rounded-full blur-[160px] pointer-events-none"></div>
+    <div class="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-12 relative z-10">
+      <div class="flex-1 flex flex-col gap-5 sm:gap-6 text-center lg:text-left items-center lg:items-start">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container border border-primary/30 shadow-[inset_1px_1px_2px_rgba(212,175,55,0.2)]">
+          <span class="material-symbols-outlined text-primary text-[15px]">verified</span>
+          <span class="text-[11px] text-primary-light font-bold tracking-wider uppercase">Verified Hardware-Grade Digital Market</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-on-surface tracking-tight leading-[1.1]">
+          Premium digital subscriptions. <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-tertiary to-crimson">Clear deals.</span> One place.
+        </h1>
+        <p class="text-sm sm:text-base lg:text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Discover verified software licenses, compare transparent tiered plans with guaranteed warranty, pay with instant regional/global checkout, and unlock instantaneous fulfillment.
+        </p>
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-1 w-full">
+          <a class="group px-6 sm:px-8 py-3.5 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-sm sm:text-base shadow-[0_12px_28px_-4px_rgba(239,68,68,0.55)] hover:shadow-[0_16px_34px_rgba(239,68,68,0.7)] active:scale-95 transition-all flex items-center gap-2 cursor-pointer" onclick="navigateTo('deals')">
+            <span>Browse Deals</span>
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-amber-300">bolt</span>
+          </a>
+          <a class="px-5 sm:px-6 py-3.5 rounded-full bg-surface-container text-on-surface font-semibold text-sm sm:text-base border border-white/10 hover:border-primary/40 hover:text-primary shadow-[0_8px_20px_rgba(0,0,0,0.6)] active:scale-95 transition-all flex items-center gap-2 cursor-pointer" onclick="navigateTo('products')">
+            <span class="material-symbols-outlined text-[18px] text-primary">category</span>
+            <span>Explore Catalog</span>
+          </a>
+        </div>
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-2 text-xs text-on-surface-variant">
+          <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[17px]">verified_user</span><span>Zero Account Sharing Risk</span></div>
+          <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-[17px]">speed</span><span>Avg delivery: 62s</span></div>
+          <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[17px]">shield_with_heart</span><span>100% Escrow Guarantee</span></div>
+        </div>
+      </div>
+      <!-- Floating Cards -->
+      <div class="w-full max-w-md lg:max-w-none lg:w-96 xl:w-[420px] relative min-h-[400px] sm:min-h-[440px] flex items-center justify-center">
+        <div class="absolute top-2 left-0 w-64 sm:w-72 rounded-xl bg-onyx-card p-4 sm:p-5 shadow-[0_14px_28px_rgba(0,0,0,0.8)] border border-primary/20 animate-float-subcard">
+          <div class="flex items-center justify-between pb-2">
+            <div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shadow-[inset_1px_1px_2px_rgba(212,175,55,0.2)]"><span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span></div>
+            <span class="px-2 py-0.5 rounded-full bg-red-950/80 border border-crimson/30 text-crimson text-[10px] font-bold uppercase tracking-wider animate-pulse">Live Stock: 14</span>
+          </div>
+          <h4 class="text-sm font-bold text-on-surface mt-1">ChatGPT Plus Team Seat</h4>
+          <p class="text-xs text-on-surface-variant">Direct Enterprise Workspace Invite</p>
+          <div class="mt-3 flex items-center justify-between">
+            <span class="text-lg font-black text-primary">$17.92<span class="text-outline text-xs font-normal"> /mo</span></span>
+            <span class="material-symbols-outlined text-primary text-[19px]">check_circle</span>
+          </div>
+        </div>
+        <div class="absolute top-16 right-0 w-72 sm:w-80 rounded-2xl bg-surface-container p-5 sm:p-6 shadow-[0_24px_48px_rgba(0,0,0,0.9),inset_1px_1px_2px_rgba(212,175,55,0.3)] border border-primary/30 z-20 animate-float-card">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-light text-on-primary flex items-center justify-center font-bold shadow-[0_4px_12px_rgba(212,175,55,0.4)]"><span class="material-symbols-outlined text-[22px]">brush</span></div>
+              <div><span class="text-sm font-bold text-on-surface block">Midjourney Pro</span><span class="text-xs text-primary font-semibold">Instant Key Voucher</span></div>
+            </div>
+            <span class="px-2 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-[11px] font-bold">Verified 100%</span>
+          </div>
+          <div class="mt-4 p-3 rounded-lg bg-surface-container-lowest border border-white/10">
+            <div class="flex justify-between text-on-surface-variant text-[11px] mb-1.5 font-medium"><span>Verification Escrow Hash</span><span class="text-primary font-bold">#71-MJ-994</span></div>
+            <div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-primary via-tertiary to-crimson h-full w-[94%]"></div></div>
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <div><span class="text-[10px] uppercase font-bold text-outline block">Fixed Price</span><span class="text-xl font-black text-primary">$28.75</span></div>
+            <a class="px-4 py-2 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-xs shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_18px_rgba(239,68,68,0.6)] active:scale-95 transition-all cursor-pointer" onclick="addToCart(5)">Claim Now</a>
+          </div>
+        </div>
+        <div class="absolute bottom-2 left-2 w-64 sm:w-72 rounded-xl bg-onyx-card p-4 shadow-[0_16px_32px_rgba(0,0,0,0.8)] border border-primary/15 z-10">
+          <div class="flex items-center justify-between"><span class="text-xs font-bold text-on-surface">Canva Enterprise</span><span class="px-1.5 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[9px] font-bold">30-Day Guarantee</span></div>
+          <p class="text-[11px] text-on-surface-variant mt-1">Full brand kit unlock &amp; cloud seats</p>
+          <div class="mt-2.5 flex items-center justify-between">
+            <span class="text-sm font-bold text-primary">$4.08<span class="text-outline text-[11px] font-normal"> /slot</span></span>
+            <span class="text-[10px] text-primary font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Instant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST METRICS -->
+  <section class="w-full px-4 sm:px-6 relative z-20 -mt-4 sm:-mt-8">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        
+          <div class="rounded-xl bg-surface-container p-4 sm:p-5 shadow-[0_10px_24px_rgba(0,0,0,0.7)] border border-white/10 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between pb-2 border-b border-white/10 text-primary">
+              <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">verified</span><span class="text-xs font-bold text-on-surface">Deliveries</span></div>
+              <span class="text-[10px] text-outline">Real-time</span>
+            </div>
+            <div class="pt-2.5"><span class="text-2xl sm:text-3xl font-black text-primary block">4,820+</span><span class="text-xs text-on-surface-variant font-medium block mt-0.5">Verified Deliveries</span><span class="text-[11px] text-outline block mt-1">Audited ledger logs</span></div>
+          </div>
+        
+          <div class="rounded-xl bg-surface-container p-4 sm:p-5 shadow-[0_10px_24px_rgba(0,0,0,0.7)] border border-white/10 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between pb-2 border-b border-white/10 text-tertiary">
+              <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="text-xs font-bold text-on-surface">Catalog</span></div>
+              <span class="text-[10px] text-outline">Real-time</span>
+            </div>
+            <div class="pt-2.5"><span class="text-2xl sm:text-3xl font-black text-primary block">140+</span><span class="text-xs text-on-surface-variant font-medium block mt-0.5">Catalog Tier Items</span><span class="text-[11px] text-outline block mt-1">Developer & AI suites</span></div>
+          </div>
+        
+          <div class="rounded-xl bg-surface-container p-4 sm:p-5 shadow-[0_10px_24px_rgba(0,0,0,0.7)] border border-white/10 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between pb-2 border-b border-white/10 text-primary">
+              <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">timer</span><span class="text-xs font-bold text-on-surface">Speed</span></div>
+              <span class="text-[10px] text-outline">Real-time</span>
+            </div>
+            <div class="pt-2.5"><span class="text-2xl sm:text-3xl font-black text-primary block">99.4%</span><span class="text-xs text-on-surface-variant font-medium block mt-0.5">Fulfillment SLA</span><span class="text-[11px] text-outline block mt-1">Dispatched under 90s</span></div>
+          </div>
+        
+          <div class="rounded-xl bg-surface-container p-4 sm:p-5 shadow-[0_10px_24px_rgba(0,0,0,0.7)] border border-white/10 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between pb-2 border-b border-white/10 text-primary">
+              <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">lock_clock</span><span class="text-xs font-bold text-on-surface">Security</span></div>
+              <span class="text-[10px] text-outline">Real-time</span>
+            </div>
+            <div class="pt-2.5"><span class="text-2xl sm:text-3xl font-black text-primary block">100%</span><span class="text-xs text-on-surface-variant font-medium block mt-0.5">Escrow & Warranty</span><span class="text-[11px] text-outline block mt-1">Auto-refund guarantee</span></div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED DEALS -->
+  <section class="w-full px-4 sm:px-6 pt-16 sm:pt-20 pb-16">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 sm:mb-10 pb-4 border-b border-white/10">
+        <div>
+          <div class="flex items-center gap-2 mb-1.5"><span class="w-2.5 h-2.5 rounded-full bg-crimson animate-pulse"></span><span class="text-xs text-primary uppercase font-bold tracking-widest">Active Stock Feed</span></div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight">Trending &amp; Live Deals</h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-1">Direct allocations and instant seats verified by automated ping.</p>
+        </div>
+        <a class="px-4 py-2 rounded-full bg-surface-container text-on-surface hover:text-primary font-semibold text-xs border border-white/10 flex items-center gap-1.5 self-start active:scale-95 transition-all cursor-pointer" onclick="navigateTo('products')">
+          View Full Catalog <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        
+  <article data-dynamic="true" class="product-card-tactile admin-exclude p-5 sm:p-6 rounded-2xl bg-surface-container border border-white/10 shadow-[0_14px_28px_-4px_rgba(0,0,0,0.75),inset_1px_1px_2px_rgba(212,175,55,0.2),inset_-2px_-3px_6px_rgba(0,0,0,0.7)] flex flex-col justify-between group">
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center justify-between pb-1">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-surface-container-lowest border border-primary/30 shadow-inner flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-[22px] text-primary">smart_toy</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[11px] text-outline tracking-wider">OpenAI Engine</span>
+            <span class="text-[11px] text-primary font-semibold">Private Mail</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 border-primary/30 text-primary border text-[10px] font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          In Stock
+        </div>
+      </div>
+      <div class="min-h-[68px]">
+        <h3 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">ChatGPT Plus (GPT-4o) Dedicated</h3>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-white/10 text-on-surface-variant text-[11px]">1 Month Auto-Renew</span>
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-primary/20 text-primary text-[11px]">30-Day Warranty</span>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 border-t border-white/10 flex flex-col gap-3">
+      <div class="flex items-baseline justify-between">
+        <div class="flex items-baseline gap-1.5">
+          <span class="text-xl font-black text-primary">$22.92</span>
+          <span class="text-xs text-outline line-through">$26.67</span>
+        </div>
+        <span class="px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold animate-emerald-pulse">-14% OFF</span>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <button class="w-full py-2 rounded-full bg-surface-container-high border border-primary/30 text-on-surface text-xs font-semibold hover:text-primary hover:border-primary transition-all active:scale-95 flex items-center justify-center gap-1" onclick="addToCart(1)">
+          <span class="material-symbols-outlined text-[16px] text-primary">add_shopping_cart</span>Cart
+        </button>
+        <button class="w-full py-2 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white text-xs font-bold shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_18px_rgba(239,68,68,0.6)] active:scale-95 transition-all flex items-center justify-center gap-1" onclick="addToCart(1); navigateTo('cart')">
+          <span class="material-symbols-outlined text-[16px]">bolt</span>Buy Now
+        </button>
+      </div>
+    </div>
+  </article>
+  <article data-dynamic="true" class="product-card-tactile admin-exclude p-5 sm:p-6 rounded-2xl bg-surface-container border border-white/10 shadow-[0_14px_28px_-4px_rgba(0,0,0,0.75),inset_1px_1px_2px_rgba(212,175,55,0.2),inset_-2px_-3px_6px_rgba(0,0,0,0.7)] flex flex-col justify-between group">
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center justify-between pb-1">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-surface-container-lowest border border-primary/30 shadow-inner flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-[22px] text-primary">code</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[11px] text-outline tracking-wider">Anysphere Systems</span>
+            <span class="text-[11px] text-primary font-semibold">Pro Tier</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 border-primary/30 text-primary border text-[10px] font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Fast Instant
+        </div>
+      </div>
+      <div class="min-h-[68px]">
+        <h3 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">Cursor AI Pro Workspace</h3>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-white/10 text-on-surface-variant text-[11px]">1 Month License</span>
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-primary/20 text-primary text-[11px]">30-Day Escrow SLA</span>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 border-t border-white/10 flex flex-col gap-3">
+      <div class="flex items-baseline justify-between">
+        <div class="flex items-baseline gap-1.5">
+          <span class="text-xl font-black text-primary">$20.00</span>
+          
+        </div>
+        
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <button class="w-full py-2 rounded-full bg-surface-container-high border border-primary/30 text-on-surface text-xs font-semibold hover:text-primary hover:border-primary transition-all active:scale-95 flex items-center justify-center gap-1" onclick="addToCart(2)">
+          <span class="material-symbols-outlined text-[16px] text-primary">add_shopping_cart</span>Cart
+        </button>
+        <button class="w-full py-2 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white text-xs font-bold shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_18px_rgba(239,68,68,0.6)] active:scale-95 transition-all flex items-center justify-center gap-1" onclick="addToCart(2); navigateTo('cart')">
+          <span class="material-symbols-outlined text-[16px]">bolt</span>Buy Now
+        </button>
+      </div>
+    </div>
+  </article>
+  <article data-dynamic="true" class="product-card-tactile admin-exclude p-5 sm:p-6 rounded-2xl bg-surface-container border border-white/10 shadow-[0_14px_28px_-4px_rgba(0,0,0,0.75),inset_1px_1px_2px_rgba(212,175,55,0.2),inset_-2px_-3px_6px_rgba(0,0,0,0.7)] flex flex-col justify-between group">
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center justify-between pb-1">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-surface-container-lowest border border-primary/30 shadow-inner flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-[22px] text-primary">terminal</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[11px] text-outline tracking-wider">Microsoft GitHub</span>
+            <span class="text-[11px] text-primary font-semibold">Business Seat</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 border-primary/30 text-primary border text-[10px] font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Org Invite
+        </div>
+      </div>
+      <div class="min-h-[68px]">
+        <h3 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">GitHub Copilot Enterprise</h3>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-white/10 text-on-surface-variant text-[11px]">12 Months Term</span>
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-primary/20 text-primary text-[11px]">365-Day Guarantee</span>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 border-t border-white/10 flex flex-col gap-3">
+      <div class="flex items-baseline justify-between">
+        <div class="flex items-baseline gap-1.5">
+          <span class="text-xl font-black text-primary">$120.83</span>
+          <span class="text-xs text-outline line-through">$183.33</span>
+        </div>
+        <span class="px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold animate-emerald-pulse">-34% OFF</span>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <button class="w-full py-2 rounded-full bg-surface-container-high border border-primary/30 text-on-surface text-xs font-semibold hover:text-primary hover:border-primary transition-all active:scale-95 flex items-center justify-center gap-1" onclick="addToCart(3)">
+          <span class="material-symbols-outlined text-[16px] text-primary">add_shopping_cart</span>Cart
+        </button>
+        <button class="w-full py-2 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white text-xs font-bold shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_18px_rgba(239,68,68,0.6)] active:scale-95 transition-all flex items-center justify-center gap-1" onclick="addToCart(3); navigateTo('cart')">
+          <span class="material-symbols-outlined text-[16px]">bolt</span>Buy Now
+        </button>
+      </div>
+    </div>
+  </article>
+  <article data-dynamic="true" class="product-card-tactile admin-exclude p-5 sm:p-6 rounded-2xl bg-surface-container border border-white/10 shadow-[0_14px_28px_-4px_rgba(0,0,0,0.75),inset_1px_1px_2px_rgba(212,175,55,0.2),inset_-2px_-3px_6px_rgba(0,0,0,0.7)] flex flex-col justify-between group">
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center justify-between pb-1">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-surface-container-lowest border border-primary/30 shadow-inner flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-[22px] text-primary">developer_board</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[11px] text-outline tracking-wider">JetBrains s.r.o.</span>
+            <span class="text-[11px] text-primary font-semibold">16 IDE Suite</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 border-primary/30 text-primary border text-[10px] font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          License Key
+        </div>
+      </div>
+      <div class="min-h-[68px]">
+        <h3 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">JetBrains All Products Pack</h3>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-white/10 text-on-surface-variant text-[11px]">1 Year Private Code</span>
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-primary/20 text-primary text-[11px]">Full Term SLA</span>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 border-t border-white/10 flex flex-col gap-3">
+      <div class="flex items-baseline justify-between">
+        <div class="flex items-baseline gap-1.5">
+          <span class="text-xl font-black text-primary">$56.67</span>
+          <span class="text-xs text-outline line-through">$100.00</span>
+        </div>
+        
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <button class="w-full py-2 rounded-full bg-surface-container-high border border-primary/30 text-on-surface text-xs font-semibold hover:text-primary hover:border-primary transition-all active:scale-95 flex items-center justify-center gap-1" onclick="addToCart(4)">
+          <span class="material-symbols-outlined text-[16px] text-primary">add_shopping_cart</span>Cart
+        </button>
+        <button class="w-full py-2 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white text-xs font-bold shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_18px_rgba(239,68,68,0.6)] active:scale-95 transition-all flex items-center justify-center gap-1" onclick="addToCart(4); navigateTo('cart')">
+          <span class="material-symbols-outlined text-[16px]">bolt</span>Buy Now
+        </button>
+      </div>
+    </div>
+  </article>
+  <article data-dynamic="true" class="product-card-tactile admin-exclude p-5 sm:p-6 rounded-2xl bg-surface-container border border-white/10 shadow-[0_14px_28px_-4px_rgba(0,0,0,0.75),inset_1px_1px_2px_rgba(212,175,55,0.2),inset_-2px_-3px_6px_rgba(0,0,0,0.7)] flex flex-col justify-between group">
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center justify-between pb-1">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-surface-container-lowest border border-primary/30 shadow-inner flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-[22px] text-primary">palette</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[11px] text-outline tracking-wider">Midjourney Inc</span>
+            <span class="text-[11px] text-primary font-semibold">Pro Plan</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 border-primary/30 text-primary border text-[10px] font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Stealth Mode
+        </div>
+      </div>
+      <div class="min-h-[68px]">
+        <h3 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">Midjourney v6.1 Pro Stealth</h3>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-white/10 text-on-surface-variant text-[11px]">1 Month Dedicated</span>
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-primary/20 text-primary text-[11px]">30-Day Escrow</span>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 border-t border-white/10 flex flex-col gap-3">
+      <div class="flex items-baseline justify-between">
+        <div class="flex items-baseline gap-1.5">
+          <span class="text-xl font-black text-primary">$60.00</span>
+          <span class="text-xs text-outline line-through">$70.83</span>
+        </div>
+        <span class="px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold animate-emerald-pulse">-15% OFF</span>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <button class="w-full py-2 rounded-full bg-surface-container-high border border-primary/30 text-on-surface text-xs font-semibold hover:text-primary hover:border-primary transition-all active:scale-95 flex items-center justify-center gap-1" onclick="addToCart(5)">
+          <span class="material-symbols-outlined text-[16px] text-primary">add_shopping_cart</span>Cart
+        </button>
+        <button class="w-full py-2 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white text-xs font-bold shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_18px_rgba(239,68,68,0.6)] active:scale-95 transition-all flex items-center justify-center gap-1" onclick="addToCart(5); navigateTo('cart')">
+          <span class="material-symbols-outlined text-[16px]">bolt</span>Buy Now
+        </button>
+      </div>
+    </div>
+  </article>
+  <article data-dynamic="true" class="product-card-tactile admin-exclude p-5 sm:p-6 rounded-2xl bg-surface-container border border-white/10 shadow-[0_14px_28px_-4px_rgba(0,0,0,0.75),inset_1px_1px_2px_rgba(212,175,55,0.2),inset_-2px_-3px_6px_rgba(0,0,0,0.7)] flex flex-col justify-between group">
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center justify-between pb-1">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-surface-container-lowest border border-primary/30 shadow-inner flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-[22px] text-primary">design_services</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[11px] text-outline tracking-wider">Figma Enterprise</span>
+            <span class="text-[11px] text-primary font-semibold">Dev Mode Full</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-red-950/80 border-crimson/30 text-crimson border text-[10px] font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-crimson animate-ping"></span>
+          Org Invite
+        </div>
+      </div>
+      <div class="min-h-[68px]">
+        <h3 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">Figma Organization Workspace Seat</h3>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-white/10 text-on-surface-variant text-[11px]">12 Months Access</span>
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-primary/20 text-primary text-[11px]">365-Day SLA</span>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 border-t border-white/10 flex flex-col gap-3">
+      <div class="flex items-baseline justify-between">
+        <div class="flex items-baseline gap-1.5">
+          <span class="text-xl font-black text-primary">$45.83</span>
+          
+        </div>
+        
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <button class="w-full py-2 rounded-full bg-surface-container-high border border-primary/30 text-on-surface text-xs font-semibold hover:text-primary hover:border-primary transition-all active:scale-95 flex items-center justify-center gap-1" onclick="addToCart(6)">
+          <span class="material-symbols-outlined text-[16px] text-primary">add_shopping_cart</span>Cart
+        </button>
+        <button class="w-full py-2 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white text-xs font-bold shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_18px_rgba(239,68,68,0.6)] active:scale-95 transition-all flex items-center justify-center gap-1" onclick="addToCart(6); navigateTo('cart')">
+          <span class="material-symbols-outlined text-[16px]">bolt</span>Buy Now
+        </button>
+      </div>
+    </div>
+  </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="w-full px-4 sm:px-6 py-16 bg-surface-container-lowest/60 border-y border-white/5">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-8 sm:mb-10 pb-4 border-b border-white/10">
+        <div><span class="text-xs text-primary uppercase font-bold tracking-widest block mb-1">Taxonomy Architecture</span><h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight">Shop by Verified Category</h2></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        
+          <a class="group rounded-2xl bg-surface-container p-4 sm:p-5 border border-white/10 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(212,175,55,0.12)] transition-all duration-300 flex items-center justify-between cursor-pointer" onclick="navigateTo('products')">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary text-primary transition-colors flex items-center justify-center border border-primary/20 shrink-0"><span class="material-symbols-outlined text-[26px]">neurology</span></div>
+              <div><h3 class="text-sm sm:text-base font-bold text-on-surface group-hover:text-primary transition-colors">AI Assistants</h3><span class="text-xs text-on-surface-variant block mt-0.5">34 Active Licenses</span></div>
+            </div>
+            <span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">chevron_right</span>
+          </a>
+        
+          <a class="group rounded-2xl bg-surface-container p-4 sm:p-5 border border-white/10 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(212,175,55,0.12)] transition-all duration-300 flex items-center justify-between cursor-pointer" onclick="navigateTo('products')">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary text-primary transition-colors flex items-center justify-center border border-primary/20 shrink-0"><span class="material-symbols-outlined text-[26px]">terminal</span></div>
+              <div><h3 class="text-sm sm:text-base font-bold text-on-surface group-hover:text-primary transition-colors">Developer Tools</h3><span class="text-xs text-on-surface-variant block mt-0.5">28 Environments</span></div>
+            </div>
+            <span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">chevron_right</span>
+          </a>
+        
+          <a class="group rounded-2xl bg-surface-container p-4 sm:p-5 border border-white/10 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(212,175,55,0.12)] transition-all duration-300 flex items-center justify-between cursor-pointer" onclick="navigateTo('products')">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary text-primary transition-colors flex items-center justify-center border border-primary/20 shrink-0"><span class="material-symbols-outlined text-[26px]">palette</span></div>
+              <div><h3 class="text-sm sm:text-base font-bold text-on-surface group-hover:text-primary transition-colors">Design & Creative</h3><span class="text-xs text-on-surface-variant block mt-0.5">22 Toolkits</span></div>
+            </div>
+            <span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">chevron_right</span>
+          </a>
+        
+          <a class="group rounded-2xl bg-surface-container p-4 sm:p-5 border border-white/10 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(212,175,55,0.12)] transition-all duration-300 flex items-center justify-between cursor-pointer" onclick="navigateTo('products')">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary text-primary transition-colors flex items-center justify-center border border-primary/20 shrink-0"><span class="material-symbols-outlined text-[26px]">cloud_sync</span></div>
+              <div><h3 class="text-sm sm:text-base font-bold text-on-surface group-hover:text-primary transition-colors">Cloud & APIs</h3><span class="text-xs text-on-surface-variant block mt-0.5">16 Token Pools</span></div>
+            </div>
+            <span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">chevron_right</span>
+          </a>
+        
+          <a class="group rounded-2xl bg-surface-container p-4 sm:p-5 border border-white/10 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(212,175,55,0.12)] transition-all duration-300 flex items-center justify-between cursor-pointer" onclick="navigateTo('products')">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary text-primary transition-colors flex items-center justify-center border border-primary/20 shrink-0"><span class="material-symbols-outlined text-[26px]">security</span></div>
+              <div><h3 class="text-sm sm:text-base font-bold text-on-surface group-hover:text-primary transition-colors">Security & VPNs</h3><span class="text-xs text-on-surface-variant block mt-0.5">19 Encrypted Tunnels</span></div>
+            </div>
+            <span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">chevron_right</span>
+          </a>
+        
+          <a class="group rounded-2xl bg-surface-container p-4 sm:p-5 border border-white/10 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(212,175,55,0.12)] transition-all duration-300 flex items-center justify-between cursor-pointer" onclick="navigateTo('products')">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary text-primary transition-colors flex items-center justify-center border border-primary/20 shrink-0"><span class="material-symbols-outlined text-[26px]">folder_special</span></div>
+              <div><h3 class="text-sm sm:text-base font-bold text-on-surface group-hover:text-primary transition-colors">Prompt Hub & Vault</h3><span class="text-xs text-on-surface-variant block mt-0.5">Free Public Repo</span></div>
+            </div>
+            <span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">chevron_right</span>
+          </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="w-full px-4 sm:px-6 py-16 bg-surface-container-lowest/50 border-y border-white/5">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+        <span class="text-xs text-primary uppercase font-bold tracking-widest block mb-1">Transactional Integrity</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight">How Seven One Works</h2>
+        <p class="text-xs sm:text-sm text-on-surface-variant mt-2">Engineered to eliminate key revocation, fraudulent sellers, and slow manual delivery.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        
+          <div class="rounded-2xl bg-surface-container p-5 sm:p-6 border border-white/10 relative flex flex-col justify-between hover:border-primary/40 transition-colors">
+            <div class="text-4xl font-black text-white/5 absolute top-3 right-4 pointer-events-none select-none">01</div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary-light text-on-primary flex items-center justify-center font-bold mb-4 shadow-[0_4px_12px_rgba(0,0,0,0.35)]"><span class="material-symbols-outlined text-[24px]">filter_alt</span></div>
+              <h3 class="text-base sm:text-lg font-bold text-on-surface">1. Select Plan</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Filter between dedicated accounts, organization seats, or clean voucher keyrings.</p>
+            </div>
+            <span class="text-xs text-primary font-bold mt-4">Real-time pricing in USD</span>
+          </div>
+        
+          <div class="rounded-2xl bg-surface-container p-5 sm:p-6 border border-white/10 relative flex flex-col justify-between hover:border-primary/40 transition-colors">
+            <div class="text-4xl font-black text-white/5 absolute top-3 right-4 pointer-events-none select-none">02</div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-crimson to-crimson-dark text-white flex items-center justify-center font-bold mb-4 shadow-[0_4px_12px_rgba(0,0,0,0.35)]"><span class="material-symbols-outlined text-[24px]">fact_check</span></div>
+              <h3 class="text-base sm:text-lg font-bold text-on-surface">2. Check Stock</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Observe live automated server pings confirming voucher validity and escrow guarantees.</p>
+            </div>
+            <span class="text-xs text-crimson font-bold mt-4">100% Escrow Protection</span>
+          </div>
+        
+          <div class="rounded-2xl bg-surface-container p-5 sm:p-6 border border-white/10 relative flex flex-col justify-between hover:border-primary/40 transition-colors">
+            <div class="text-4xl font-black text-white/5 absolute top-3 right-4 pointer-events-none select-none">03</div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-600 to-amber-700 text-white flex items-center justify-center font-bold mb-4 shadow-[0_4px_12px_rgba(0,0,0,0.35)]"><span class="material-symbols-outlined text-[24px]">lock</span></div>
+              <h3 class="text-base sm:text-lg font-bold text-on-surface">3. Secure Checkout</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Pay seamlessly via Visa, Mastercard, or Crypto (BTC/ETH/USDT) vaults.</p>
+            </div>
+            <span class="text-xs text-primary font-bold mt-4">Zero Merchant Markups</span>
+          </div>
+        
+          <div class="rounded-2xl bg-surface-container p-5 sm:p-6 border border-white/10 relative flex flex-col justify-between hover:border-primary/40 transition-colors">
+            <div class="text-4xl font-black text-white/5 absolute top-3 right-4 pointer-events-none select-none">04</div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br bg-surface-container-high text-primary border border-primary/20 flex items-center justify-center font-bold mb-4 shadow-[0_4px_12px_rgba(0,0,0,0.35)]"><span class="material-symbols-outlined text-[24px]">rocket_launch</span></div>
+              <h3 class="text-base sm:text-lg font-bold text-on-surface">4. Instant Delivery</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Retrieve activation keys or org invite tokens instantaneously in your dashboard.</p>
+            </div>
+            <span class="text-xs text-primary font-bold mt-4">Avg dispatch: < 90s</span>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="w-full px-4 sm:px-6 py-12 mb-8">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-6 sm:p-12 border border-primary/30 shadow-[0_24px_48px_rgba(0,0,0,0.85)] flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-crimson/15 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute top-0 right-1/3 w-64 h-64 bg-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+        <div class="flex flex-col gap-2.5 max-w-xl relative z-10 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="text-xs text-primary uppercase font-bold tracking-widest">Instant Fulfillment Active</span></div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-on-surface tracking-tight">Ready to access hardware-grade software licenses?</h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Join 4,800+ developers getting legitimate AI and development tools at unmatched secondary rates.</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 relative z-10 shrink-0">
+          <a class="px-6 sm:px-8 py-3.5 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-xs sm:text-sm shadow-[0_12px_28px_rgba(239,68,68,0.5)] hover:shadow-[0_16px_34px_rgba(239,68,68,0.7)] active:scale-95 transition-all flex items-center gap-2 cursor-pointer" onclick="navigateTo('products')">Explore Active Stock <span class="material-symbols-outlined text-[17px]">arrow_forward</span></a>
+          <a class="px-5 sm:px-6 py-3.5 rounded-full bg-surface-container-lowest text-on-surface hover:text-primary font-bold text-xs sm:text-sm border border-white/10 active:scale-95 transition-all flex items-center gap-2 cursor-pointer" onclick="navigateTo('ai-finder')"><span class="material-symbols-outlined text-primary text-[17px]">smart_toy</span>AI Finder Tool</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="w-full bg-surface-container-lowest border-t border-white/10 shadow-[0_-12px_32px_rgba(0,0,0,0.7)]" id="main-footer">
+<div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-12 sm:py-16">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-10 mb-12">
+<div class="col-span-2 md:col-span-3 lg:col-span-1 flex flex-col gap-4">
+<a class="flex items-center gap-2.5 group cursor-pointer" onclick="navigateTo('home')">
+<img src="assets/Sevenone.jpg" alt="SEVEN ONE Logo" class="w-8 h-8 rounded-lg object-cover border border-primary/30 shadow-[inset_1px_1px_2px_rgba(212,175,55,0.3)]" />
+<span class="text-lg font-black tracking-tight">
+<span class="text-white">SEVEN</span><span class="text-crimson">ONE</span>
+</span>
+</a>
+<p class="text-xs text-on-surface-variant leading-relaxed">The tactile hardware-grade marketplace for verified digital assets, enterprise software licenses, and cloud vaults.</p>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-xs text-primary border border-white/10 w-fit font-bold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Network 99.98% SLA</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface pb-1 border-b border-white/10">Shop</span>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('products')">Verified Software</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('products')">Developer Subscriptions</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('deals')">Deal Radar Flash Sales</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('vault')">Public Vault Resources</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('products')">Bulk Cloud Seats</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface pb-1 border-b border-white/10">Discover</span>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('ai-finder')">AI License Finder</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('vault')">Prompts Playground</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('faq')">Verification Protocol</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('deals')">Price Drop Alerts</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('vault')">Developer Toolkits</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface pb-1 border-b border-white/10">Support</span>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('orders')">Order Tracking Radar</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('faq')">Escrow Claim Desk</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('faq')">Instant Replacement</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('faq')">Hardware Token Keys</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('faq')">Priority 24/7 Desk</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface pb-1 border-b border-white/10">Enterprise</span>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('account')">Merchant Admin Portal</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('faq')">Reseller Governance</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors py-0.5 cursor-pointer" onclick="navigateTo('faq')">Cryptographic Audit</a>
+
+</div>
+</div>
+<div class="pt-6 border-t border-white/10 flex flex-col lg:flex-row items-center justify-between gap-4">
+<div class="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 text-xs text-on-surface">
+<span class="text-outline mr-1 text-[11px]">Protected Settlement:</span>
+
+<span class="px-2 py-0.5 rounded bg-surface-container border border-white/10 text-[11px]">Visa Secure</span>
+<span class="px-2 py-0.5 rounded bg-surface-container border border-white/10 text-[11px]">Mastercard</span>
+<span class="px-2 py-0.5 rounded bg-surface-container border border-white/10 text-[11px]">Crypto (BTC/ETH/USDT)</span>
+</div>
+<div class="text-outline text-[11px] text-center lg:text-right">
+© 2025 SEVEN ONE Marketplace. Independent secondary license broker. All trademarks belong to their owners.
+</div>
+</div>
+</div>
+</footer>
+
+<!-- ==================== MOBILE BOTTOM NAV (FIXED) ==================== -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 md:hidden backdrop-blur-xl bg-[#090a0f]/95 border-t border-white/10 px-2 py-2 pb-[max(0.75rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.85)]" id="mobile-bottom-nav">
+<div class="flex items-center justify-around max-w-md mx-auto">
+<a class="mobile-nav-link flex flex-col items-center gap-0.5 min-w-[48px] py-1 cursor-pointer" data-page="home" onclick="navigateTo('home')">
+<span class="material-symbols-outlined text-[22px]">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="mobile-nav-link flex flex-col items-center gap-0.5 min-w-[48px] py-1 cursor-pointer" data-page="products" onclick="navigateTo('products')">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+<span class="text-[10px] font-semibold">Catalog</span>
+</a>
+<a class="mobile-nav-link flex flex-col items-center gap-0.5 min-w-[48px] py-1 cursor-pointer" data-page="deals" onclick="navigateTo('deals')">
+<span class="material-symbols-outlined text-[22px]">local_fire_department</span>
+<span class="text-[10px] font-semibold">Deals</span>
+</a>
+<a class="mobile-nav-link flex flex-col items-center gap-0.5 min-w-[48px] py-1 cursor-pointer" data-page="ai-finder" onclick="navigateTo('ai-finder')">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+<span class="text-[10px] font-semibold">Finder</span>
+</a>
+<a class="mobile-nav-link flex flex-col items-center gap-0.5 min-w-[48px] py-1 cursor-pointer relative" data-page="cart" onclick="navigateTo('cart')">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="text-[10px] font-semibold">Cart</span>
+<span class="absolute top-0 right-1 w-3.5 h-3.5 rounded-full bg-crimson text-white text-[9px] flex items-center justify-center font-bold" id="cart-badge-mobile">3</span>
+</a>
+</div>
+</nav>
+
+<!-- ==================== APP LOGIC ==================== -->
+<script>
+// ===== GLOBAL STATE =====
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDE_-4ASZWssjFqKL5Pc9XvycVj51jkX6I",
+  authDomain: "se7enone.firebaseapp.com",
+  projectId: "se7enone",
+  storageBucket: "se7enone.firebasestorage.app",
+  messagingSenderId: "591380653765",
+  appId: "1:591380653765:web:db8d51e4e1f8eeb22372ac",
+  measurementId: "G-63XRP112HZ"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// ===== AUTHENTICATION WALL =====
+const auth = firebase.auth();
+let currentUser = null;
+
+function renderAuthWall(mode = 'login') {
+  const isLogin = mode === 'login';
+  return `
+    <div class="fixed inset-0 z-[200] bg-onyx-base flex flex-col items-center justify-center p-4">
+      <div class="absolute inset-0 shimmer-bar pointer-events-none opacity-20"></div>
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center gap-3 mb-8 relative z-10">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-dark via-primary to-primary-light flex items-center justify-center shadow-[0_4px_16px_rgba(212,175,55,0.4)]">
+          <img src="assets/Sevenone.jpg" alt="SEVEN ONE Logo" class="w-10 h-10 object-cover rounded-lg" onerror="this.style.display='none'">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-light via-primary to-primary-dark tracking-tighter">SEVEN ONE</span>
+          <span class="text-[10px] text-primary uppercase font-bold tracking-[0.2em] -mt-1">Digital Reserve</span>
+        </div>
+      </div>
+      
+      <!-- Auth Card -->
+      <div class="w-full max-w-md bg-surface-container-high border border-white/10 rounded-3xl p-8 shadow-[0_24px_48px_rgba(0,0,0,0.8)] relative z-10">
+        <h2 class="text-2xl font-bold text-on-surface mb-2">${isLogin ? 'Welcome Back' : 'Create Account'}</h2>
+        <p class="text-sm text-on-surface-variant mb-6">${isLogin ? 'Enter your credentials to access the vault.' : 'Register to gain access to the digital reserve.'}</p>
+        
+        <form id="auth-form" method="POST" action="#" onsubmit="${isLogin ? 'handleFirebaseLogin(event)' : 'handleFirebaseRegister(event)'}" class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-xs font-bold text-outline uppercase tracking-wider">Email Address</label>
+            <div class="relative">
+              <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-[18px]">mail</span>
+              <input type="email" id="auth-email" name="email" autocomplete="username" required class="w-full bg-surface-container border border-white/10 rounded-xl py-3 pl-11 pr-4 text-sm text-on-surface focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-outline" placeholder="user@example.com">
+            </div>
+          </div>
+          
+          <div class="flex flex-col gap-1.5">
+            <label class="text-xs font-bold text-outline uppercase tracking-wider">Passkey</label>
+            <div class="relative">
+              <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-[18px]">key</span>
+              <input type="password" id="auth-pass" name="password" autocomplete="${isLogin ? 'current-password' : 'new-password'}" required class="w-full bg-surface-container border border-white/10 rounded-xl py-3 pl-11 pr-12 text-sm text-on-surface focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-outline" placeholder="••••••••">
+              <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-white flex items-center justify-center transition-colors" onclick="const p = document.getElementById('auth-pass'); p.type = p.type === 'password' ? 'text' : 'password'; this.querySelector('span').textContent = p.type === 'password' ? 'visibility' : 'visibility_off';">
+                <span class="material-symbols-outlined text-[18px]">visibility</span>
+              </button>
+            </div>
+          </div>
+          
+          <button type="submit" class="w-full mt-2 py-3.5 rounded-xl bg-gradient-to-r from-primary to-primary-light text-on-primary font-bold shadow-[0_8px_20px_rgba(212,175,55,0.3)] hover:shadow-[0_12px_24px_rgba(212,175,55,0.5)] active:scale-95 transition-all">
+            ${isLogin ? 'Authenticate' : 'Initialize Account'}
+          </button>
+        </form>
+        
+        <div class="mt-6 pt-6 border-t border-white/10 text-center">
+          <button type="button" onclick="renderAuthPage('${isLogin ? 'register' : 'login'}')" class="text-sm text-primary hover:text-primary-light font-medium transition-colors">
+            ${isLogin ? 'Need an account? Register here.' : 'Already registered? Authenticate here.'}
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderAuthPage(mode) {
+  isAuthWallVisible = true;
+  document.getElementById('main-header').style.display = 'none';
+  document.getElementById('mobile-bottom-nav').style.display = 'none';
+  const floatBtn = document.getElementById('floating-edit-btn');
+  if(floatBtn) floatBtn.style.display = 'none';
+  document.querySelector('main').innerHTML = renderAuthWall(mode);
+}
+
+function handleFirebaseLogin(e) {
+  e.preventDefault();
+  const email = document.getElementById('auth-email').value;
+  const pass = document.getElementById('auth-pass').value;
+  showToast('Authenticating...');
+  auth.signInWithEmailAndPassword(email, pass).then(() => {
+    showToast('Authentication Successful');
+  }).catch(err => {
+    showToast('Error: ' + err.message);
+  });
+}
+
+function handleFirebaseRegister(e) {
+  e.preventDefault();
+  const email = document.getElementById('auth-email').value;
+  const pass = document.getElementById('auth-pass').value;
+  showToast('Registering credentials...');
+  auth.createUserWithEmailAndPassword(email, pass).then(() => {
+    showToast('Registration complete. Welcome!');
+  }).catch(err => {
+    showToast('Error: ' + err.message);
+  });
+}
+
+function handleFirebaseLogout() {
+  auth.signOut();
+  showToast('Logged out securely.');
+}
+
+
+// Sync with Firestore
+try {
+  db.collection('products').onSnapshot((snapshot) => {
+    if (!snapshot.empty) {
+      let newProducts = [];
+      snapshot.forEach(doc => {
+        newProducts.push({ dbId: doc.id, ...doc.data() });
+      });
+      
+      // Compare new data with current data (ignoring dbId to prevent false positives on initial load)
+      const cleanOld = JSON.stringify(products.map(({dbId, ...rest}) => rest));
+      const cleanNew = JSON.stringify(newProducts.map(({dbId, ...rest}) => rest));
+      
+      products = newProducts;
+      
+      // Only completely re-render the page if the product data actually changed
+      if (cleanOld !== cleanNew && AppState.currentPage) {
+        loadPage(AppState.currentPage);
+      }
+    }
+  }, (err) => { /* Offline fallback */ });
+
+  // One-time seed if empty
+  db.collection('products').get().then(snap => {
+    if (snap.empty && products.length > 0) {
+      products.forEach(p => {
+        db.collection('products').doc(p.id.toString()).set(p).catch(() => {});
+      });
+    }
+  }).catch(() => {});
+} catch(e) {}
+
+// ===== WIX-STYLE INLINE EDITOR =====
+let siteContent = {};
+
+// Fetch site content
+try {
+  db.collection('siteContent').onSnapshot((snapshot) => {
+    snapshot.forEach(doc => {
+      siteContent[doc.id] = doc.data().html;
+    });
+    applySiteContent();
+  }, (err) => { /* Offline fallback */ });
+} catch(e) {}
+
+function applySiteContent() {
+  for (const [path, html] of Object.entries(siteContent)) {
+    try {
+      const el = document.querySelector(path);
+      if (el && !el.hasAttribute('data-dynamic')) {
+        el.innerHTML = html;
+      }
+    } catch(e) {}
+  }
+}
+
+function getDomPath(el) {
+  if (!el || !el.parentNode) return '';
+  if (el.id) return '#' + el.id;
+  if (el === document.body) return 'body';
+  
+  let index = 1;
+  let sibling = el.previousElementSibling;
+  while (sibling) {
+    if (sibling.nodeName === el.nodeName) index++;
+    sibling = sibling.previousElementSibling;
+  }
+  return getDomPath(el.parentNode) + ' > ' + el.nodeName.toLowerCase() + ':nth-of-type(' + index + ')';
+}
+
+function toggleEditMode() {
+  AppState.editMode = !AppState.editMode;
+  // Expanded selector to allow editing almost ANY text element on the website
+  const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a, button, li, label, b, strong, td, th');
+  
+  if (AppState.editMode) {
+    showToast('Wix-Style Edit Mode: ON. Click any text to edit!');
+    elements.forEach(el => {
+      // Skip product cards, admin panel, and buttons
+      if (el.closest('.admin-exclude') || el.closest('button') || el.closest('a') || el.hasAttribute('data-dynamic')) return;
+      
+      el.contentEditable = "true";
+      el.classList.add('hover:outline', 'hover:outline-primary', 'hover:outline-2', 'hover:bg-primary/10', 'transition-all', 'cursor-text');
+      
+      el.onblur = function() {
+        const path = getDomPath(el);
+        if(path) {
+          db.collection('siteContent').doc(btoa(path).replace(/=/g, '')).set({
+            path: path,
+            html: el.innerHTML
+          });
+          showToast('Text saved automatically!');
+        }
+      };
+    });
+  } else {
+    showToast('Edit Mode: OFF');
+    elements.forEach(el => {
+      el.contentEditable = "false";
+      el.classList.remove('hover:outline', 'hover:outline-primary', 'hover:outline-2', 'hover:bg-primary/10', 'cursor-text');
+      el.onblur = null;
+    });
+  }
+}
+
+// Hook into loadPage to apply content and edit mode
+let isAuthWallVisible = false;
+const originalLoadPage = loadPage;
+loadPage = function(page) {
+  isAuthWallVisible = false;
+  
+  // We MUST allow originalLoadPage to run so data updates (like admin login or new products) take effect visually!
+  originalLoadPage(page);
+  applySiteContent();
+  
+  // Re-apply edit mode if it was active
+  if (AppState.editMode) {
+    AppState.editMode = false;
+    toggleEditMode();
+  }
+};
+
+const AppState = {
+  currentPage: 'home',
+  cart: [
+    { id: 1, name: 'ChatGPT Plus (GPT-4o) Dedicated', price: 2750, warranty: '30-Day', qty: 1 },
+    { id: 2, name: 'Cursor AI Pro Workspace', price: 2400, warranty: '30-Day Escrow', qty: 1 },
+    { id: 3, name: 'Midjourney v6.1 Pro Stealth', price: 7200, warranty: '30-Day Escrow', qty: 1 }
+  ],
+  orders: [
+    { id: 'SO-7129', product: 'Claude 3.5 Sonnet API Pool', status: 'Delivered', date: 'Sep 28, 2025', price: 4200, key: 'CL-35-XXXX-9A2F' },
+    { id: 'SO-7084', product: 'Perplexity Pro 1-Year Pass', status: 'Delivered', date: 'Sep 15, 2025', price: 3800, key: 'PX-12-XXXX-B3C1' },
+    { id: 'SO-7051', product: 'Spotify Premium Dedicated', status: 'Active', date: 'Sep 02, 2025', price: 650, key: 'SP-06-XXXX-D4E2' }
+  ],
+  walletBalance: 15400,
+  currency: 'USD'
+};
+
+// ===== ADMIN LOGIC =====
+function renderAdminPage() {
+  if (!AppState.adminLoggedIn) {
+    return `
+      <div class="page-section flex items-center justify-center min-h-[60vh]">
+        <div class="w-full max-w-sm p-6 rounded-2xl bg-surface-container border border-white/10 shadow-2xl">
+          <h2 class="text-2xl font-black text-on-surface mb-6 text-center">Admin Access</h2>
+          <div class="flex flex-col gap-4">
+            <input type="text" id="admin-user" placeholder="Username" class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border border-white/10 text-white focus:border-primary outline-none">
+            <input type="password" id="admin-pass" placeholder="Password" class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border border-white/10 text-white focus:border-primary outline-none">
+            <button class="w-full py-3 rounded-xl bg-primary text-on-primary font-bold active:scale-95 transition-all mt-2" onclick="handleAdminLogin()">Login</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  return `
+    <div class="page-section p-4 sm:p-8">
+      <div class="max-w-[1200px] mx-auto">
+        <div class="flex items-center justify-between mb-8">
+          <h1 class="text-3xl font-black text-on-surface">Admin Dashboard</h1>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button onclick="navigateTo('home')" class="px-4 py-2 bg-surface-container border border-white/10 rounded-lg text-xs font-bold hover:bg-white/5 transition-colors">Edit Home Page</button>
+            <button onclick="navigateTo('products')" class="px-4 py-2 bg-surface-container border border-white/10 rounded-lg text-xs font-bold hover:bg-white/5 transition-colors">Edit Products Page</button>
+            <button onclick="navigateTo('ai-finder')" class="px-4 py-2 bg-surface-container border border-white/10 rounded-lg text-xs font-bold hover:bg-white/5 transition-colors">Edit AI Finder</button>
+            <button onclick="navigateTo('faq')" class="px-4 py-2 bg-surface-container border border-white/10 rounded-lg text-xs font-bold hover:bg-white/5 transition-colors">Edit FAQ</button>
+          </div>
+          <button class="px-4 py-2 rounded-full bg-surface-container-high border border-white/10 text-sm font-bold hover:text-crimson transition-colors" onclick="handleAdminLogout()">Logout</button>
+        </div>
+        <div class="grid grid-cols-1 gap-6">
+          <div class="p-6 rounded-2xl bg-surface-container border border-white/10">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-xl font-bold text-primary">Manage Products</h2>
+              <button class="px-4 py-2 rounded-full bg-primary text-on-primary text-xs font-bold active:scale-95 transition-all" onclick="openProductModal()">+ Add Product</button>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-sm">
+                <thead class="text-on-surface-variant border-b border-white/10">
+                  <th class="pb-3 font-semibold">ID</th>
+                  <th class="pb-3 font-semibold">Name</th>
+                  <th class="pb-3 font-semibold">Price</th>
+                  <th class="pb-3 font-semibold text-right">Actions</th>
+                </thead>
+                <tbody id="admin-products-list" class="admin-exclude">
+                  ${products.map(p => `
+                    <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                      <td class="py-3 text-outline">#${p.id}</td>
+                      <td class="py-3 font-medium">${p.name}</td>
+                      <td class="py-3 text-primary font-bold">${formatPrice(p.price)}</td>
+                      <td class="py-3 text-right">
+                        <button class="text-xs text-primary hover:underline mr-3" onclick="editProduct(${p.id})">Edit</button>
+                        <button class="text-xs text-crimson hover:underline" onclick="deleteProduct(${p.id})">Delete</button>
+                      </td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="admin-modal" class="admin-exclude class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm items-center justify-center p-4">
+        <div class="w-full max-w-lg bg-surface-container rounded-2xl border border-white/10 p-6 max-h-[90vh] overflow-y-auto relative">
+          <button class="absolute top-4 right-4 text-outline hover:text-white" onclick="document.getElementById('admin-modal').classList.replace('flex','hidden')"><span class="material-symbols-outlined">close</span></button>
+          <h3 class="text-xl font-bold mb-4" id="admin-modal-title">Add Product</h3>
+          <div class="flex flex-col gap-3 text-sm">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name" placeholder="Product Name" class="w-full p-2.5 rounded bg-surface-container-lowest border border-white/10 text-white outline-none focus:border-primary">
+            <input type="number" id="edit-price" placeholder="Price (USD)" class="w-full p-2.5 rounded bg-surface-container-lowest border border-white/10 text-white outline-none focus:border-primary">
+            <input type="text" id="edit-category" placeholder="Category" class="w-full p-2.5 rounded bg-surface-container-lowest border border-white/10 text-white outline-none focus:border-primary">
+            <button class="w-full py-3 mt-2 rounded bg-primary text-on-primary font-bold active:scale-95" onclick="saveProduct()">Save Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function handleAdminLogin() {
+  if (document.getElementById('admin-user').value === 'kawser' && document.getElementById('admin-pass').value === 'kawser') {
+    AppState.adminLoggedIn = true;
+    showToast('Admin logged in successfully');
+    loadPage('me');
+  } else {
+    showToast('Invalid credentials');
+  }
+}
+
+function handleAdminLogout() {
+  AppState.adminLoggedIn = false;
+  loadPage('me');
+}
+
+function openProductModal() {
+  document.getElementById('edit-id').value = '';
+  document.getElementById('edit-name').value = '';
+  document.getElementById('edit-price').value = '';
+  document.getElementById('edit-category').value = '';
+  document.getElementById('admin-modal-title').textContent = 'Add Product';
+  document.getElementById('admin-modal').classList.replace('hidden', 'flex');
+}
+
+function editProduct(id) {
+  const p = products.find(x => x.id === id);
+  if(!p) return;
+  document.getElementById('edit-id').value = p.id;
+  document.getElementById('edit-name').value = p.name;
+  document.getElementById('edit-price').value = p.price;
+  document.getElementById('edit-category').value = p.category || '';
+  document.getElementById('admin-modal-title').textContent = 'Edit Product';
+  document.getElementById('admin-modal').classList.replace('hidden', 'flex');
+}
+
+function deleteProduct(id) {
+  db.collection('products').doc(id.toString()).delete().then(() => {
+    showToast('Product deleted from Firebase!');
+  });
+}
+
+function saveProduct() {
+  const id = document.getElementById('edit-id').value;
+  const name = document.getElementById('edit-name').value;
+  const price = parseFloat(document.getElementById('edit-price').value) || 0;
+  const category = document.getElementById('edit-category').value || 'misc';
+  
+  if(!name) return showToast('Name required');
+  
+  const payload = {
+    name,
+    price,
+    category
+  };
+
+  if(id) {
+    payload.id = parseInt(id);
+    db.collection('products').doc(id.toString()).set(payload, { merge: true }).then(() => {
+        showToast('Product updated on Firebase!');
+    });
+  } else {
+    const newId = products.length ? Math.max(...products.map(x => x.id)) + 1 : 1;
+    payload.id = newId;
+    payload.brand = 'Custom';
+    payload.tier = 'Tier';
+    payload.icon = 'sell';
+    db.collection('products').doc(newId.toString()).set(payload).then(() => {
+        showToast('Product added to Firebase!');
+    });
+  }
+  
+  document.getElementById('admin-modal').classList.replace('flex', 'hidden');
+}
+
+// ===== PRODUCTS DATA =====
+
+let products = [
+  { id: 1, name: 'ChatGPT Plus (GPT-4o) Dedicated', brand: 'OpenAI Engine', tier: 'Private Mail', icon: 'smart_toy', price: 2750, oldPrice: 3200, discount: 14, stock: 'In Stock', stockCount: 100, term: '1 Month Auto-Renew', warranty: '30-Day Warranty', category: 'ai' },
+  { id: 2, name: 'Cursor AI Pro Workspace', brand: 'Anysphere Systems', tier: 'Pro Tier', icon: 'code', price: 2400, oldPrice: null, discount: null, stock: 'Fast Instant', stockCount: 28, term: '1 Month License', warranty: '30-Day Escrow SLA', category: 'dev' },
+  { id: 3, name: 'GitHub Copilot Enterprise', brand: 'Microsoft GitHub', tier: 'Business Seat', icon: 'terminal', price: 14500, oldPrice: 22000, discount: 34, stock: 'Org Invite', stockCount: 12, term: '12 Months Term', warranty: '365-Day Guarantee', category: 'dev' },
+  { id: 4, name: 'JetBrains All Products Pack', brand: 'JetBrains s.r.o.', tier: '16 IDE Suite', icon: 'developer_board', price: 6800, oldPrice: 12000, discount: null, stock: 'License Key', stockCount: 18, term: '1 Year Private Code', warranty: 'Full Term SLA', category: 'dev' },
+  { id: 5, name: 'Midjourney v6.1 Pro Stealth', brand: 'Midjourney Inc', tier: 'Pro Plan', icon: 'palette', price: 7200, oldPrice: 8500, discount: 15, stock: 'Stealth Mode', stockCount: 9, term: '1 Month Dedicated', warranty: '30-Day Escrow', category: 'creative' },
+  { id: 6, name: 'Figma Organization Workspace Seat', brand: 'Figma Enterprise', tier: 'Dev Mode Full', icon: 'design_services', price: 5500, oldPrice: null, discount: null, stock: 'Org Invite', stockCount: 4, term: '12 Months Access', warranty: '365-Day SLA', category: 'creative' },
+  { id: 7, name: 'Notion AI Plus Annual Pass', brand: 'Notion Labs', tier: 'Plus + AI Add-on', icon: 'note_alt', price: 4800, oldPrice: 7200, discount: 33, stock: 'Voucher Ready', stockCount: 22, term: '12 Months License', warranty: '365-Day Guarantee', category: 'dev' },
+  { id: 8, name: 'NordVPN Ultimate 2-Year Pass', brand: 'Nord Security', tier: 'Ultimate Bundle', icon: 'shield', price: 3450, oldPrice: 7800, discount: 56, stock: '10 Devices', stockCount: 35, term: '24 Months Plan', warranty: 'Full Term Escrow', category: 'security' },
+  { id: 9, name: 'Claude 3.5 Sonnet API Pool', brand: 'Anthropic', tier: 'Tier 4 Proxy', icon: 'terminal', price: 4200, oldPrice: null, discount: null, stock: 'Only 3 left', stockCount: 3, term: 'Token Bucket', warranty: '30-Day Replacement', category: 'ai' },
+  { id: 10, name: 'Perplexity Pro 1-Year Pass', brand: 'Perplexity AI', tier: 'Pro Plan', icon: 'search_insights', price: 3800, oldPrice: null, discount: null, stock: 'In Stock', stockCount: 19, term: 'Yearly Pass', warranty: 'Official Voucher', category: 'ai' },
+  { id: 11, name: 'Spotify Premium Dedicated Slot', brand: 'Spotify AB', tier: 'Premium Individual', icon: 'graphic_eq', price: 650, oldPrice: null, discount: null, stock: 'In Stock', stockCount: 42, term: '6 Months', warranty: 'Zero-Interruption', category: 'media' },
+  { id: 12, name: 'YouTube Premium Clean Invite', brand: 'Google LLC', tier: 'Family Plan', icon: 'smart_display', price: 1100, oldPrice: null, discount: null, stock: 'In Stock', stockCount: 11, term: '12 Months', warranty: '12-Month Replacement', category: 'media' }
+];
+
+// ===== NAVIGATION SYSTEM =====
+function navigateTo(page) {
+  window.location.hash = page;
+}
+
+function handleHashChange() {
+  const hash = window.location.hash.replace('#', '') || 'home';
+  loadPage(hash);
+}
+
+function loadPage(page, force = false) {
+  const mainHeader = document.getElementById('main-header');
+  const mobileNav = document.getElementById('mobile-bottom-nav');
+  if (mainHeader) mainHeader.style.display = '';
+  if (mobileNav) mobileNav.style.display = '';
+
+  if (!force && AppState.currentPage === page && document.getElementById('main-content').children.length > 0) {
+    updateNavStates(page);
+    return;
+  }
+  AppState.currentPage = page;
+  const main = document.getElementById('main-content');
+  window.scrollTo({ top: 0, behavior: 'instant' });
+
+  
+  // Update nav states
+  updateNavStates(page);
+  
+  // Floating Admin Edit Button
+  let editBtn = document.getElementById('floating-edit-btn');
+  if (AppState.adminLoggedIn) {
+    if (!editBtn) {
+      editBtn = document.createElement('button');
+      editBtn.id = 'floating-edit-btn';
+      editBtn.className = 'fixed bottom-24 right-6 z-[100] px-4 py-3 rounded-full bg-primary text-on-primary font-bold shadow-[0_8px_24px_rgba(212,175,55,0.6)] hover:scale-105 active:scale-95 transition-all flex items-center gap-2 admin-exclude';
+      editBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">edit</span><span>Visual Editor</span>';
+      editBtn.onclick = toggleEditMode;
+      document.body.appendChild(editBtn);
+    }
+    editBtn.style.display = 'flex';
+  } else {
+    if (editBtn) editBtn.style.display = 'none';
+  }
+
+
+  // Render page
+  switch(page) {
+    case 'home': main.innerHTML = renderHomePage(); break;
+    case 'products': main.innerHTML = renderProductsPage(); break;
+    case 'deals': main.innerHTML = renderDealsPage(); break;
+    case 'ai-finder': main.innerHTML = renderAIFinderPage(); initAIFinder(); break;
+    case 'vault': main.innerHTML = renderVaultPage(); break;
+    case 'cart': main.innerHTML = renderCartPage(); break;
+    case 'orders': main.innerHTML = renderOrdersPage(); break;
+    case 'account': main.innerHTML = renderAccountPage(); break;
+    case 'faq': main.innerHTML = renderFAQPage(); break;
+    case 'me': main.innerHTML = renderAdminPage(); break;
+    default: main.innerHTML = renderHomePage(); break;
+  }
+
+  updateCartBadges();
+}
+
+function updateNavStates(page) {
+  // Desktop nav
+  document.querySelectorAll('#desktop-nav .nav-link').forEach(link => {
+    if (link.dataset.page === page) {
+      link.className = 'nav-link px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer bg-gradient-to-r from-primary to-primary-light text-on-primary shadow-[0_2px_8px_rgba(212,175,55,0.4)]';
+    } else {
+      link.className = 'nav-link px-3.5 py-1.5 rounded-full text-xs font-medium text-on-surface-variant hover:text-primary transition-colors cursor-pointer';
+    }
+  });
+
+  // Mobile nav
+  document.querySelectorAll('#mobile-bottom-nav .mobile-nav-link').forEach(link => {
+    if (link.dataset.page === page) {
+      link.classList.add('text-primary');
+      link.classList.remove('text-on-surface-variant');
+    } else {
+      link.classList.remove('text-primary');
+      link.classList.add('text-on-surface-variant');
+    }
+  });
+}
+
+// ===== CART SYSTEM =====
+function addToCart(productId) {
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+  const existing = AppState.cart.find(c => c.id === productId);
+  if (existing) {
+    existing.qty++;
+  } else {
+    AppState.cart.push({ id: product.id, name: product.name, price: product.price, warranty: product.warranty, qty: 1 });
+  }
+  updateCartBadges();
+  showToast(`${product.name} added to cart!`);
+}
+
+function removeFromCart(productId) {
+  AppState.cart = AppState.cart.filter(c => c.id !== productId);
+  updateCartBadges();
+  if (AppState.currentPage === 'cart') loadPage('cart');
+}
+
+function updateCartBadges() {
+  const count = AppState.cart.reduce((sum, item) => sum + item.qty, 0);
+  const badgeH = document.getElementById('cart-badge-header');
+  const badgeM = document.getElementById('cart-badge-mobile');
+  if (badgeH) { badgeH.textContent = count; badgeH.style.display = count > 0 ? 'flex' : 'none'; }
+  if (badgeM) { badgeM.textContent = count; badgeM.style.display = count > 0 ? 'flex' : 'none'; }
+}
+
+function getCartTotal() {
+  return AppState.cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+}
+
+// ===== UTILITY =====
+function formatPrice(price) {
+  return '$' + (price / 120).toFixed(2);
+}
+
+function showToast(message) {
+  const container = document.getElementById('toast-container');
+  const toast = document.createElement('div');
+  toast.className = 'toast px-4 py-2.5 rounded-xl bg-surface-container border border-primary/30 shadow-[0_8px_24px_rgba(0,0,0,0.7)] text-on-surface text-xs font-semibold flex items-center gap-2';
+  toast.innerHTML = `<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>${message}`;
+  container.appendChild(toast);
+  setTimeout(() => toast.remove(), 2500);
+}
+
+function addFunds() {
+  AppState.walletBalance += 5000;
+  const wbEl = document.getElementById('wallet-balance');
+  if (wbEl) wbEl.textContent = formatPrice(AppState.walletBalance);
+  showToast(formatPrice(5000) + ' added to your wallet!');
+  if (AppState.currentPage === 'account') loadPage('account');
+}
+
+function handleVaultAction(action) {
+  showToast(`Initiating ${action}...`);
+  setTimeout(() => {
+    showToast(`${action} completed successfully! Check your downloads.`);
+  }, 1500);
+}
+
+function filterProductsAndNavigate(name) {
+  navigateTo('products');
+  setTimeout(() => {
+    const grid = document.getElementById('products-grid');
+    if (!grid) return;
+    const filtered = products.filter(p => p.name === name);
+    grid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
+  }, 100);
+}
+
+function openSearchModal() {
+  document.getElementById('search-modal').classList.remove('hidden');
+  setTimeout(() => document.getElementById('search-input').focus(), 100);
+}
+
+function closeSearchModal() {
+  document.getElementById('search-modal').classList.add('hidden');
+  document.getElementById('search-input').value = '';
+}
+
+function handleSearch(query) {
+  const container = document.getElementById('search-results');
+  if (!query.trim()) {
+    container.innerHTML = '<div class="text-center py-8 text-on-surface-variant text-sm">Type to search across all products and categories...</div>';
+    return;
+  }
+  const results = products.filter(p => p.name.toLowerCase().includes(query.toLowerCase()) || p.brand.toLowerCase().includes(query.toLowerCase()));
+  if (results.length === 0) {
+    container.innerHTML = '<div class="text-center py-8 text-on-surface-variant text-sm">No results found. Try a different search term.</div>';
+    return;
+  }
+  container.innerHTML = results.map(p => `
+    <button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-surface-container-high transition-colors text-left" onclick="closeSearchModal(); filterProductsAndNavigate('${p.name.replace(/'/g, "\\'")}')">
+      <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary border border-primary/20 shrink-0">
+        <span class="material-symbols-outlined text-[20px]">${p.icon}</span>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="text-sm font-bold text-on-surface truncate">${p.name}</div>
+        <div class="text-xs text-on-surface-variant">${p.brand} • ${formatPrice(p.price)}</div>
+      </div>
+      <span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+    </button>
+  `).join('');
+}
+
+
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); openSearchModal(); }
+  if (e.key === 'Escape') closeSearchModal();
+});
+
+// ===== PRODUCT CARD RENDERER =====
+function renderProductCard(p) {
+  const isLow = p.stockCount <= 5;
+  return `
+  <article data-dynamic="true" class="product-card-tactile admin-exclude p-5 sm:p-6 rounded-2xl bg-surface-container border border-white/10 shadow-[0_14px_28px_-4px_rgba(0,0,0,0.75),inset_1px_1px_2px_rgba(212,175,55,0.2),inset_-2px_-3px_6px_rgba(0,0,0,0.7)] flex flex-col justify-between group">
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center justify-between pb-1">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-surface-container-lowest border border-primary/30 shadow-inner flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-[22px] text-primary">${p.icon}</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[11px] text-outline tracking-wider">${p.brand}</span>
+            <span class="text-[11px] text-primary font-semibold">${p.tier}</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1 px-2 py-0.5 rounded-full ${isLow ? 'bg-red-950/80 border-crimson/30 text-crimson' : 'bg-primary/10 border-primary/30 text-primary'} border text-[10px] font-bold">
+          <span class="w-1.5 h-1.5 rounded-full ${isLow ? 'bg-crimson animate-ping' : 'bg-primary'}"></span>
+          ${p.stock}
+        </div>
+      </div>
+      <div class="min-h-[68px]">
+        <h3 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">${p.name}</h3>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-white/10 text-on-surface-variant text-[11px]">${p.term}</span>
+        <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest border border-primary/20 text-primary text-[11px]">${p.warranty}</span>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 border-t border-white/10 flex flex-col gap-3">
+      <div class="flex items-baseline justify-between">
+        <div class="flex items-baseline gap-1.5">
+          <span class="text-xl font-black text-primary">${formatPrice(p.price)}</span>
+          ${p.oldPrice ? `<span class="text-xs text-outline line-through">${formatPrice(p.oldPrice)}</span>` : ''}
+        </div>
+        ${p.discount ? `<span class="px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold animate-emerald-pulse">-${p.discount}% OFF</span>` : ''}
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <button class="w-full py-2 rounded-full bg-surface-container-high border border-primary/30 text-on-surface text-xs font-semibold hover:text-primary hover:border-primary transition-all active:scale-95 flex items-center justify-center gap-1" onclick="addToCart(${p.id})">
+          <span class="material-symbols-outlined text-[16px] text-primary">add_shopping_cart</span>Cart
+        </button>
+        <button class="w-full py-2 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white text-xs font-bold shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_18px_rgba(239,68,68,0.6)] active:scale-95 transition-all flex items-center justify-center gap-1" onclick="addToCart(${p.id}); navigateTo('cart')">
+          <span class="material-symbols-outlined text-[16px]">bolt</span>Buy Now
+        </button>
+      </div>
+    </div>
+  </article>`;
+}
+
+// ===== PAGE RENDERERS =====
+
+function renderHomePage() {
+  return `<div class="page-section">
+  <!-- FLASH DROP BANNER -->
+  <div class="w-full relative z-30 bg-surface-container-lowest border-b border-white/10 overflow-hidden" id="flashDropBanner">
+    <div class="absolute inset-0 shimmer-bar pointer-events-none opacity-40"></div>
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-2 flex flex-col md:flex-row items-center justify-between gap-2.5 relative z-10">
+      <div class="flex items-center gap-2.5 w-full md:w-auto shrink-0 justify-between md:justify-start">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-950/80 text-red-200 border border-crimson/40 text-[11px] font-bold uppercase tracking-wider shadow-[0_2px_8px_rgba(239,68,68,0.3)]">
+          <span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-crimson opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-crimson"></span></span>
+          <span>Flash Drop & Cloud Credits</span>
+        </div>
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface text-[11px] border border-white/10 font-medium">
+          <span class="material-symbols-outlined text-[13px] text-crimson animate-pulse">timer</span>
+          <span class="text-outline">Ends in:</span>
+          <span class="font-mono font-bold text-primary" id="countdown-timer">02:47:19</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 shrink-0 self-end md:self-auto">
+        <a class="group inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white text-xs font-bold shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_20px_rgba(239,68,68,0.6)] active:scale-95 transition-all cursor-pointer" onclick="navigateTo('deals')">
+          <span class="material-symbols-outlined text-[15px] text-amber-300">local_fire_department</span>
+          <span>Claim Voucher</span>
+          <span class="material-symbols-outlined text-[14px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+        </a>
+        <button class="w-6 h-6 rounded-full bg-surface-container text-outline hover:text-white flex items-center justify-center transition-colors border border-white/10" onclick="document.getElementById('flashDropBanner').remove()" title="Dismiss" type="button">
+          <span class="material-symbols-outlined text-[14px]">close</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="w-full relative px-4 sm:px-6 pt-10 sm:pt-16 pb-16 sm:pb-24 overflow-hidden">
+    <div class="absolute -top-24 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-1/3 right-10 w-96 h-96 bg-crimson/10 rounded-full blur-[160px] pointer-events-none"></div>
+    <div class="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-12 relative z-10">
+      <div class="flex-1 flex flex-col gap-5 sm:gap-6 text-center lg:text-left items-center lg:items-start">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container border border-primary/30 shadow-[inset_1px_1px_2px_rgba(212,175,55,0.2)]">
+          <span class="material-symbols-outlined text-primary text-[15px]">verified</span>
+          <span class="text-[11px] text-primary-light font-bold tracking-wider uppercase">Verified Hardware-Grade Digital Market</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-on-surface tracking-tight leading-[1.1]">
+          Premium digital subscriptions. <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-tertiary to-crimson">Clear deals.</span> One place.
+        </h1>
+        <p class="text-sm sm:text-base lg:text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Discover verified software licenses, compare transparent tiered plans with guaranteed warranty, pay with instant regional/global checkout, and unlock instantaneous fulfillment.
+        </p>
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-1 w-full">
+          <a class="group px-6 sm:px-8 py-3.5 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-sm sm:text-base shadow-[0_12px_28px_-4px_rgba(239,68,68,0.55)] hover:shadow-[0_16px_34px_rgba(239,68,68,0.7)] active:scale-95 transition-all flex items-center gap-2 cursor-pointer" onclick="navigateTo('deals')">
+            <span>Browse Deals</span>
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-amber-300">bolt</span>
+          </a>
+          <a class="px-5 sm:px-6 py-3.5 rounded-full bg-surface-container text-on-surface font-semibold text-sm sm:text-base border border-white/10 hover:border-primary/40 hover:text-primary shadow-[0_8px_20px_rgba(0,0,0,0.6)] active:scale-95 transition-all flex items-center gap-2 cursor-pointer" onclick="navigateTo('products')">
+            <span class="material-symbols-outlined text-[18px] text-primary">category</span>
+            <span>Explore Catalog</span>
+          </a>
+        </div>
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-2 text-xs text-on-surface-variant">
+          <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[17px]">verified_user</span><span>Zero Account Sharing Risk</span></div>
+          <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-[17px]">speed</span><span>Avg delivery: 62s</span></div>
+          <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[17px]">shield_with_heart</span><span>100% Escrow Guarantee</span></div>
+        </div>
+      </div>
+      <!-- Floating Cards -->
+      <div class="w-full max-w-md lg:max-w-none lg:w-96 xl:w-[420px] relative min-h-[400px] sm:min-h-[440px] flex items-center justify-center">
+        <div class="absolute top-2 left-0 w-64 sm:w-72 rounded-xl bg-onyx-card p-4 sm:p-5 shadow-[0_14px_28px_rgba(0,0,0,0.8)] border border-primary/20 animate-float-subcard">
+          <div class="flex items-center justify-between pb-2">
+            <div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shadow-[inset_1px_1px_2px_rgba(212,175,55,0.2)]"><span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span></div>
+            <span class="px-2 py-0.5 rounded-full bg-red-950/80 border border-crimson/30 text-crimson text-[10px] font-bold uppercase tracking-wider animate-pulse">Live Stock: 14</span>
+          </div>
+          <h4 class="text-sm font-bold text-on-surface mt-1">ChatGPT Plus Team Seat</h4>
+          <p class="text-xs text-on-surface-variant">Direct Enterprise Workspace Invite</p>
+          <div class="mt-3 flex items-center justify-between">
+            <span class="text-lg font-black text-primary">$17.92<span class="text-outline text-xs font-normal"> /mo</span></span>
+            <span class="material-symbols-outlined text-primary text-[19px]">check_circle</span>
+          </div>
+        </div>
+        <div class="absolute top-16 right-0 w-72 sm:w-80 rounded-2xl bg-surface-container p-5 sm:p-6 shadow-[0_24px_48px_rgba(0,0,0,0.9),inset_1px_1px_2px_rgba(212,175,55,0.3)] border border-primary/30 z-20 animate-float-card">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-light text-on-primary flex items-center justify-center font-bold shadow-[0_4px_12px_rgba(212,175,55,0.4)]"><span class="material-symbols-outlined text-[22px]">brush</span></div>
+              <div><span class="text-sm font-bold text-on-surface block">Midjourney Pro</span><span class="text-xs text-primary font-semibold">Instant Key Voucher</span></div>
+            </div>
+            <span class="px-2 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-[11px] font-bold">Verified 100%</span>
+          </div>
+          <div class="mt-4 p-3 rounded-lg bg-surface-container-lowest border border-white/10">
+            <div class="flex justify-between text-on-surface-variant text-[11px] mb-1.5 font-medium"><span>Verification Escrow Hash</span><span class="text-primary font-bold">#71-MJ-994</span></div>
+            <div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-primary via-tertiary to-crimson h-full w-[94%]"></div></div>
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <div><span class="text-[10px] uppercase font-bold text-outline block">Fixed Price</span><span class="text-xl font-black text-primary">$28.75</span></div>
+            <a class="px-4 py-2 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-xs shadow-[0_4px_14px_rgba(239,68,68,0.4)] hover:shadow-[0_6px_18px_rgba(239,68,68,0.6)] active:scale-95 transition-all cursor-pointer" onclick="addToCart(5)">Claim Now</a>
+          </div>
+        </div>
+        <div class="absolute bottom-2 left-2 w-64 sm:w-72 rounded-xl bg-onyx-card p-4 shadow-[0_16px_32px_rgba(0,0,0,0.8)] border border-primary/15 z-10">
+          <div class="flex items-center justify-between"><span class="text-xs font-bold text-on-surface">Canva Enterprise</span><span class="px-1.5 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[9px] font-bold">30-Day Guarantee</span></div>
+          <p class="text-[11px] text-on-surface-variant mt-1">Full brand kit unlock &amp; cloud seats</p>
+          <div class="mt-2.5 flex items-center justify-between">
+            <span class="text-sm font-bold text-primary">$4.08<span class="text-outline text-[11px] font-normal"> /slot</span></span>
+            <span class="text-[10px] text-primary font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Instant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST METRICS -->
+  <section class="w-full px-4 sm:px-6 relative z-20 -mt-4 sm:-mt-8">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        ${[
+          { icon: 'verified', label: 'Deliveries', value: '4,820+', sub: 'Verified Deliveries', note: 'Audited ledger logs', color: 'text-primary' },
+          { icon: 'grid_view', label: 'Catalog', value: '140+', sub: 'Catalog Tier Items', note: 'Developer & AI suites', color: 'text-tertiary' },
+          { icon: 'timer', label: 'Speed', value: '99.4%', sub: 'Fulfillment SLA', note: 'Dispatched under 90s', color: 'text-primary' },
+          { icon: 'lock_clock', label: 'Security', value: '100%', sub: 'Escrow & Warranty', note: 'Auto-refund guarantee', color: 'text-primary' }
+        ].map(m => `
+          <div class="rounded-xl bg-surface-container p-4 sm:p-5 shadow-[0_10px_24px_rgba(0,0,0,0.7)] border border-white/10 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between pb-2 border-b border-white/10 ${m.color}">
+              <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">${m.icon}</span><span class="text-xs font-bold text-on-surface">${m.label}</span></div>
+              <span class="text-[10px] text-outline">Real-time</span>
+            </div>
+            <div class="pt-2.5"><span class="text-2xl sm:text-3xl font-black text-primary block">${m.value}</span><span class="text-xs text-on-surface-variant font-medium block mt-0.5">${m.sub}</span><span class="text-[11px] text-outline block mt-1">${m.note}</span></div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED DEALS -->
+  <section class="w-full px-4 sm:px-6 pt-16 sm:pt-20 pb-16">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 sm:mb-10 pb-4 border-b border-white/10">
+        <div>
+          <div class="flex items-center gap-2 mb-1.5"><span class="w-2.5 h-2.5 rounded-full bg-crimson animate-pulse"></span><span class="text-xs text-primary uppercase font-bold tracking-widest">Active Stock Feed</span></div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight">Trending &amp; Live Deals</h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-1">Direct allocations and instant seats verified by automated ping.</p>
+        </div>
+        <a class="px-4 py-2 rounded-full bg-surface-container text-on-surface hover:text-primary font-semibold text-xs border border-white/10 flex items-center gap-1.5 self-start active:scale-95 transition-all cursor-pointer" onclick="navigateTo('products')">
+          View Full Catalog <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        ${products.slice(0, 6).map(p => renderProductCard(p)).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="w-full px-4 sm:px-6 py-16 bg-surface-container-lowest/60 border-y border-white/5">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-8 sm:mb-10 pb-4 border-b border-white/10">
+        <div><span class="text-xs text-primary uppercase font-bold tracking-widest block mb-1">Taxonomy Architecture</span><h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight">Shop by Verified Category</h2></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        ${[
+          { icon: 'neurology', name: 'AI Assistants', count: '34 Active Licenses' },
+          { icon: 'terminal', name: 'Developer Tools', count: '28 Environments' },
+          { icon: 'palette', name: 'Design & Creative', count: '22 Toolkits' },
+          { icon: 'cloud_sync', name: 'Cloud & APIs', count: '16 Token Pools' },
+          { icon: 'security', name: 'Security & VPNs', count: '19 Encrypted Tunnels' },
+          { icon: 'folder_special', name: 'Prompt Hub & Vault', count: 'Free Public Repo' }
+        ].map(c => `
+          <a class="group rounded-2xl bg-surface-container p-4 sm:p-5 border border-white/10 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(212,175,55,0.12)] transition-all duration-300 flex items-center justify-between cursor-pointer" onclick="navigateTo('products')">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary text-primary transition-colors flex items-center justify-center border border-primary/20 shrink-0"><span class="material-symbols-outlined text-[26px]">${c.icon}</span></div>
+              <div><h3 class="text-sm sm:text-base font-bold text-on-surface group-hover:text-primary transition-colors">${c.name}</h3><span class="text-xs text-on-surface-variant block mt-0.5">${c.count}</span></div>
+            </div>
+            <span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">chevron_right</span>
+          </a>
+        `).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="w-full px-4 sm:px-6 py-16 bg-surface-container-lowest/50 border-y border-white/5">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+        <span class="text-xs text-primary uppercase font-bold tracking-widest block mb-1">Transactional Integrity</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight">How Seven One Works</h2>
+        <p class="text-xs sm:text-sm text-on-surface-variant mt-2">Engineered to eliminate key revocation, fraudulent sellers, and slow manual delivery.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        ${[
+          { num: '01', icon: 'filter_alt', title: '1. Select Plan', desc: 'Filter between dedicated accounts, organization seats, or clean voucher keyrings.', note: 'Real-time pricing in USD', color: 'from-primary to-primary-light text-on-primary' },
+          { num: '02', icon: 'fact_check', title: '2. Check Stock', desc: 'Observe live automated server pings confirming voucher validity and escrow guarantees.', note: '100% Escrow Protection', color: 'from-crimson to-crimson-dark text-white', noteColor: 'text-crimson' },
+          { num: '03', icon: 'lock', title: '3. Secure Checkout', desc: 'Pay seamlessly via Visa, Mastercard, or Crypto (BTC/ETH/USDT) vaults.', note: 'Zero Merchant Markups', color: 'from-amber-600 to-amber-700 text-white' },
+          { num: '04', icon: 'rocket_launch', title: '4. Instant Delivery', desc: 'Retrieve activation keys or org invite tokens instantaneously in your dashboard.', note: 'Avg dispatch: < 90s', color: 'bg-surface-container-high text-primary border border-primary/20' }
+        ].map(s => `
+          <div class="rounded-2xl bg-surface-container p-5 sm:p-6 border border-white/10 relative flex flex-col justify-between hover:border-primary/40 transition-colors">
+            <div class="text-4xl font-black text-white/5 absolute top-3 right-4 pointer-events-none select-none">${s.num}</div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center font-bold mb-4 shadow-[0_4px_12px_rgba(0,0,0,0.35)]"><span class="material-symbols-outlined text-[24px]">${s.icon}</span></div>
+              <h3 class="text-base sm:text-lg font-bold text-on-surface">${s.title}</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">${s.desc}</p>
+            </div>
+            <span class="text-xs ${s.noteColor || 'text-primary'} font-bold mt-4">${s.note}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="w-full px-4 sm:px-6 py-12 mb-8">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-6 sm:p-12 border border-primary/30 shadow-[0_24px_48px_rgba(0,0,0,0.85)] flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-crimson/15 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute top-0 right-1/3 w-64 h-64 bg-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+        <div class="flex flex-col gap-2.5 max-w-xl relative z-10 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="text-xs text-primary uppercase font-bold tracking-widest">Instant Fulfillment Active</span></div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-on-surface tracking-tight">Ready to access hardware-grade software licenses?</h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Join 4,800+ developers getting legitimate AI and development tools at unmatched secondary rates.</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 relative z-10 shrink-0">
+          <a class="px-6 sm:px-8 py-3.5 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-xs sm:text-sm shadow-[0_12px_28px_rgba(239,68,68,0.5)] hover:shadow-[0_16px_34px_rgba(239,68,68,0.7)] active:scale-95 transition-all flex items-center gap-2 cursor-pointer" onclick="navigateTo('products')">Explore Active Stock <span class="material-symbols-outlined text-[17px]">arrow_forward</span></a>
+          <a class="px-5 sm:px-6 py-3.5 rounded-full bg-surface-container-lowest text-on-surface hover:text-primary font-bold text-xs sm:text-sm border border-white/10 active:scale-95 transition-all flex items-center gap-2 cursor-pointer" onclick="navigateTo('ai-finder')"><span class="material-symbols-outlined text-primary text-[17px]">smart_toy</span>AI Finder Tool</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>`;
+}
+
+function renderDealsPage() {
+  const dealProducts = products.filter(p => p.discount || p.stockCount <= 10);
+  return `<div class="page-section">
+    <section class="w-full px-4 sm:px-6 py-8 sm:py-12">
+      <div class="max-w-[1320px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-4 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-2 mb-1.5"><span class="w-2.5 h-2.5 rounded-full bg-crimson animate-pulse"></span><span class="text-xs text-primary uppercase font-bold tracking-widest">Live Deal Radar</span></div>
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight">Active Deals &amp; Flash Drops</h1>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-1">Verified price drops, limited pools, and urgency-priced allocations.</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          ${(dealProducts.length > 0 ? dealProducts : products.slice(0,6)).map(p => renderProductCard(p)).join('')}
+        </div>
+      </div>
+    </section>
+  </div>`;
+}
+
+function renderProductsPage() {
+  return `<div class="page-section">
+    <section class="w-full px-4 sm:px-6 py-8 sm:py-12">
+      <div class="max-w-[1320px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-4 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-2 text-xs text-outline mb-2">
+              <a class="hover:text-primary transition-colors cursor-pointer" onclick="navigateTo('home')">Home</a>
+              <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+              <span class="text-primary font-semibold">Verified Marketplace</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight">Verified Digital Hardware Catalog</h1>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-1">All ${products.length} live verified SKUs with escrow protection.</p>
+          </div>
+          <div class="flex items-center gap-2 p-1 rounded-full bg-surface-container-lowest border border-white/10 overflow-x-auto self-start">
+            <button class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-primary to-primary-light text-on-primary text-xs font-bold whitespace-nowrap active:scale-95 transition-all" onclick="filterProducts('all')">All</button>
+            <button class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary text-xs font-semibold whitespace-nowrap active:scale-95 transition-all" onclick="filterProducts('ai')">AI</button>
+            <button class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary text-xs font-semibold whitespace-nowrap active:scale-95 transition-all" onclick="filterProducts('dev')">Developer</button>
+            <button class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary text-xs font-semibold whitespace-nowrap active:scale-95 transition-all" onclick="filterProducts('creative')">Creative</button>
+            <button class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-primary text-xs font-semibold whitespace-nowrap active:scale-95 transition-all" onclick="filterProducts('security')">Security</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6" id="products-grid">
+          ${products.map(p => renderProductCard(p)).join('')}
+        </div>
+      </div>
+    </section>
+  </div>`;
+}
+
+function filterProducts(category) {
+  const grid = document.getElementById('products-grid');
+  if (!grid) return;
+  const filtered = category === 'all' ? products : products.filter(p => p.category === category);
+  grid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
+}
+
+function renderVaultPage() {
+  return `<div class="page-section">
+    <section class="w-full px-4 sm:px-6 py-8 sm:py-12">
+      <div class="max-w-[1320px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-4 border-b border-white/10">
+          <div><span class="text-xs text-primary uppercase font-bold tracking-widest block mb-1">Zero Cost Community Repository</span><h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight">The Free Public Vault</h1><p class="text-xs sm:text-sm text-on-surface-variant mt-1">Free developer system prompts, Tailwind layouts, and cloud sandbox starter keys.</p></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+          ${[
+            { icon: 'psychology', label: 'Prompt Pack #12', title: 'Full-Stack Code Architecture Prompts', desc: 'Curated system prompts calibrated for Claude 3.5 Sonnet to construct complete Node.js microservices.', stat: '2,410 Downloads', action: 'Download Raw', actionIcon: 'download', color: 'bg-primary/10 text-primary border-primary/20' },
+            { icon: 'layers', label: 'UI Toolkit v1', title: 'Claymorphic Design System Tokens', desc: 'Figma token variables, soft dual-light bevel CSS configurations, and responsive marketplace cards.', stat: '1,890 Clones', action: 'Get Tokens', actionIcon: 'download', color: 'bg-red-950/60 text-crimson border-crimson/30', actionColor: 'text-crimson' },
+            { icon: 'dns', label: 'Community Pool', title: 'Public Sandbox API Proxy Keys', desc: 'Test your experimental AI agents with throttled rate-free test tokens sponsored by Seven One.', stat: 'Operational', action: 'View Endpoints', actionIcon: 'key', color: 'bg-primary/10 text-primary border-primary/20' }
+          ].map(v => `
+            <div class="rounded-2xl bg-surface-container p-5 sm:p-6 border border-white/10 hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl ${v.color} flex items-center justify-center border mb-3"><span class="material-symbols-outlined text-[20px]">${v.icon}</span></div>
+                <span class="text-xs ${v.actionColor || 'text-primary'} uppercase font-bold tracking-wider">${v.label}</span>
+                <h3 class="text-base sm:text-lg font-bold text-on-surface mt-1">${v.title}</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">${v.desc}</p>
+              </div>
+              <div class="pt-4 mt-4 flex items-center justify-between border-t border-white/10">
+                <span class="text-xs ${v.stat === 'Operational' ? 'text-primary font-bold' : 'text-outline'}">${v.stat}</span>
+                <a class="${v.actionColor || 'text-primary'} text-xs hover:underline flex items-center gap-0.5 font-bold cursor-pointer" onclick="handleVaultAction('${v.action}')"><span>${v.action}</span><span class="material-symbols-outlined text-[14px]">${v.actionIcon}</span></a>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+  </div>`;
+}
+
+function renderCartPage() {
+  const total = getCartTotal();
+  return `<div class="page-section">
+    <section class="w-full px-4 sm:px-6 py-8 sm:py-12">
+      <div class="max-w-[860px] mx-auto">
+        <div class="mb-8 pb-4 border-b border-white/10">
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">Escrow Cart</h1>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-1">${AppState.cart.length} items secured in your vault</p>
+        </div>
+        ${AppState.cart.length === 0 ? `
+          <div class="text-center py-16">
+            <span class="material-symbols-outlined text-[48px] text-outline mb-4">shopping_cart</span>
+            <h3 class="text-lg font-bold text-on-surface mb-2">Your cart is empty</h3>
+            <p class="text-sm text-on-surface-variant mb-6">Browse our verified catalog to add items</p>
+            <a class="px-6 py-3 rounded-full bg-gradient-to-r from-primary to-primary-light text-on-primary font-bold text-sm active:scale-95 transition-all cursor-pointer" onclick="navigateTo('products')">Browse Products</a>
+          </div>
+        ` : `
+          <div class="flex flex-col gap-4">
+            ${AppState.cart.map(item => `
+              <div class="rounded-2xl bg-surface-container p-4 sm:p-5 border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex items-center gap-4 flex-1 min-w-0">
+                  <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary border border-primary/20 shrink-0">
+                    <span class="material-symbols-outlined text-[24px]">inventory_2</span>
+                  </div>
+                  <div class="min-w-0">
+                    <h3 class="text-sm font-bold text-on-surface truncate">${item.name}</h3>
+                    <div class="flex items-center gap-2 mt-1">
+                      <span class="text-xs text-on-surface-variant">${item.warranty}</span>
+                      <span class="text-xs text-primary font-bold">Qty: ${item.qty}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4 shrink-0 w-full sm:w-auto justify-between sm:justify-end">
+                  <span class="text-lg font-black text-primary">${formatPrice(item.price * item.qty)}</span>
+                  <button class="w-8 h-8 rounded-full bg-crimson/10 text-crimson hover:bg-crimson hover:text-white flex items-center justify-center transition-all active:scale-95" onclick="removeFromCart(${item.id})">
+                    <span class="material-symbols-outlined text-[16px]">delete</span>
+                  </button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          <!-- Cart Summary -->
+          <div class="mt-8 rounded-2xl bg-surface-container p-5 sm:p-6 border border-primary/30 shadow-[0_12px_32px_rgba(0,0,0,0.7)]">
+            <div class="flex items-center justify-between mb-4 pb-4 border-b border-white/10">
+              <span class="text-sm text-on-surface-variant font-medium">Subtotal (${AppState.cart.length} items)</span>
+              <span class="text-xl font-black text-primary">${formatPrice(total)}</span>
+            </div>
+            <div class="flex items-center justify-between mb-4 text-xs text-on-surface-variant">
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[14px]">shield</span>Escrow Protection</span>
+              <span class="text-primary font-bold">Included</span>
+            </div>
+            <div class="flex items-center justify-between mb-6 text-xs text-on-surface-variant">
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[14px]">bolt</span>Processing Fee</span>
+              <span class="text-primary font-bold">${formatPrice(0)} (Waived)</span>
+            </div>
+            <button class="w-full py-3.5 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-sm shadow-[0_12px_28px_rgba(239,68,68,0.5)] hover:shadow-[0_16px_34px_rgba(239,68,68,0.7)] active:scale-95 transition-all flex items-center justify-center gap-2" onclick="processCheckout()">
+              <span class="material-symbols-outlined text-[18px]">lock</span>
+              Secure Checkout — ${formatPrice(total)}
+            </button>
+            <div class="flex items-center justify-center gap-4 mt-4 text-[11px] text-on-surface-variant">
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[14px]">verified_user</span>256-Bit Escrow</span>
+              <span>•</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[14px]">flash_on</span>Instant Delivery</span>
+            </div>
+          </div>
+        `}
+      </div>
+    </section>
+  </div>`;
+}
+
+function processCheckout() {
+  const btn = event.target.closest('button');
+  const total = getCartTotal();
+  if (AppState.walletBalance < total) {
+    showToast('Insufficient balance! Please add funds.');
+    return;
+  }
+  btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>Securing Vault Escrow...';
+  btn.disabled = true;
+  setTimeout(() => {
+    AppState.walletBalance -= total;
+    const newOrders = AppState.cart.map(item => ({
+      id: 'SO-' + (7130 + Math.floor(Math.random() * 100)),
+      product: item.name,
+      status: 'Processing',
+      date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+      price: item.price,
+      key: 'Pending Dispatch'
+    }));
+    AppState.orders = [...newOrders, ...AppState.orders];
+    AppState.cart = [];
+    const wbEl = document.getElementById('wallet-balance');
+    if (wbEl) wbEl.textContent = formatPrice(AppState.walletBalance);
+    updateCartBadges();
+    showToast('Order placed successfully! Keys dispatching...');
+    navigateTo('orders');
+  }, 1500);
+}
+
+function renderOrdersPage() {
+  return `<div class="page-section">
+    <section class="w-full px-4 sm:px-6 py-8 sm:py-12">
+      <div class="max-w-[960px] mx-auto">
+        <div class="mb-8 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span><span class="text-xs text-primary uppercase font-bold tracking-widest">Order Tracking Radar</span></div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">Your Orders</h1>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-1">${AppState.orders.length} total transactions verified</p>
+        </div>
+        ${AppState.orders.length === 0 ? `
+          <div class="text-center py-16">
+            <span class="material-symbols-outlined text-[48px] text-outline mb-4">receipt_long</span>
+            <h3 class="text-lg font-bold text-on-surface mb-2">No orders yet</h3>
+            <p class="text-sm text-on-surface-variant mb-6">Your completed purchases will appear here</p>
+            <a class="px-6 py-3 rounded-full bg-gradient-to-r from-primary to-primary-light text-on-primary font-bold text-sm active:scale-95 transition-all cursor-pointer" onclick="navigateTo('products')">Browse Products</a>
+          </div>
+        ` : `
+          <div class="flex flex-col gap-4">
+            ${AppState.orders.map(order => `
+              <div class="rounded-2xl bg-surface-container p-4 sm:p-5 border border-white/10 hover:border-primary/40 transition-all">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 pb-3 border-b border-white/10">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl ${order.status === 'Delivered' ? 'bg-primary/10 text-primary border-primary/20' : order.status === 'Active' ? 'bg-green-950/60 text-green-400 border-green-500/30' : 'bg-amber-950/60 text-amber-400 border-amber-500/30'} border flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[20px]">${order.status === 'Delivered' ? 'check_circle' : order.status === 'Active' ? 'play_circle' : 'pending'}</span>
+                    </div>
+                    <div>
+                      <h3 class="text-sm font-bold text-on-surface">${order.product}</h3>
+                      <span class="text-xs text-on-surface-variant">Order ${order.id} • ${order.date}</span>
+                    </div>
+                  </div>
+                  <span class="px-3 py-1 rounded-full text-xs font-bold ${order.status === 'Delivered' ? 'bg-primary/10 text-primary border border-primary/30' : order.status === 'Active' ? 'bg-green-950/60 text-green-400 border border-green-500/30' : 'bg-amber-950/60 text-amber-400 border border-amber-500/30'}">${order.status}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                  <div class="flex items-center gap-4 text-xs">
+                    <span class="text-on-surface-variant">Amount: <strong class="text-primary">${formatPrice(order.price)}</strong></span>
+                    <span class="text-on-surface-variant">Key: <strong class="text-on-surface font-mono">${order.key}</strong></span>
+                  </div>
+                  ${order.status === 'Delivered' || order.status === 'Active' ? `<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-xs border border-white/10 hover:text-primary hover:border-primary/40 transition-all active:scale-95" onclick="showToast('Key copied to clipboard!')">Copy Key</button>` : ''}
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `}
+      </div>
+    </section>
+  </div>`;
+}
+
+function renderAccountPage() {
+  return `<div class="page-section">
+    <section class="w-full px-4 sm:px-6 py-8 sm:py-12">
+      <div class="max-w-[860px] mx-auto">
+        <div class="mb-8 pb-4 border-b border-white/10">
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">Account Dashboard</h1>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-1">Manage your profile, wallet, and security settings</p>
+        </div>
+        <!-- Profile Card -->
+        <div class="rounded-2xl bg-surface-container p-6 sm:p-8 border border-primary/30 shadow-[0_16px_36px_rgba(0,0,0,0.7)] mb-6">
+          <div class="flex flex-col sm:flex-row items-center gap-6">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-on-primary shadow-[0_8px_20px_rgba(212,175,55,0.4)]">
+              <span class="material-symbols-outlined text-[36px]">person</span>
+            </div>
+            <div class="text-center sm:text-left flex-1">
+              <h2 class="text-xl font-bold text-on-surface">Nadid Ahmed</h2>
+              <p class="text-sm text-on-surface-variant">nadid@sevenone.digital</p>
+              <div class="flex items-center justify-center sm:justify-start gap-3 mt-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-[11px] font-bold">Premium Member</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-surface-container-high border border-white/10 text-on-surface-variant text-[11px]">Since Sep 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          ${[
+            { icon: 'account_balance_wallet', label: 'Wallet Balance', value: formatPrice(AppState.walletBalance), color: 'text-primary' },
+            { icon: 'receipt_long', label: 'Total Orders', value: AppState.orders.length.toString(), color: 'text-primary' },
+            { icon: 'verified', label: 'Active Licenses', value: AppState.orders.filter(o => o.status === 'Active' || o.status === 'Delivered').length.toString(), color: 'text-primary' },
+            { icon: 'shield', label: 'Escrow Score', value: '100%', color: 'text-primary' }
+          ].map(s => `
+            <div class="rounded-xl bg-surface-container p-4 border border-white/10">
+              <div class="flex items-center gap-1.5 mb-2"><span class="material-symbols-outlined ${s.color} text-[18px]">${s.icon}</span><span class="text-[11px] text-outline uppercase tracking-wider">${s.label}</span></div>
+              <span class="text-xl font-black ${s.color}">${s.value}</span>
+            </div>
+          `).join('')}
+        </div>
+        <!-- Quick Actions -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          ${[
+            { icon: 'local_shipping', label: 'Track Orders', desc: 'View delivery status and key dispatch', page: 'orders' },
+            { icon: 'shopping_bag', label: 'View Cart', desc: 'Review items in your escrow cart', page: 'cart' },
+            { icon: 'tune', label: 'AI Stack Finder', desc: 'Get personalized tool recommendations', page: 'ai-finder' },
+            { icon: 'help', label: 'Help & FAQ', desc: 'Trust, warranty & fulfillment questions', page: 'faq' }
+          ].map(a => `
+            <a class="group rounded-2xl bg-surface-container p-4 border border-white/10 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex items-center gap-4 cursor-pointer" onclick="navigateTo('${a.page}')">
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary text-primary transition-colors flex items-center justify-center border border-primary/20 shrink-0"><span class="material-symbols-outlined text-[24px]">${a.icon}</span></div>
+              <div><h3 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">${a.label}</h3><span class="text-xs text-on-surface-variant">${a.desc}</span></div>
+              <span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all ml-auto">chevron_right</span>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+  </div>`;
+}
+
+function renderFAQPage() {
+  const faqs = [
+    { q: 'How does the 30-Day Escrow Warranty protect my purchase?', a: 'Funds deposited for software licenses remain in our cryptographic escrow smart-hold until your seat or key confirms valid active tenure. If an upstream service revokes access unexpectedly within the warranty timeframe, our automated desk replaces the key or triggers a 100% wallet credit instantaneously.' },
+    { q: 'Are these subscriptions official seats or cracked credentials?', a: 'Seven One strictly sells genuine, verified subscription allocations, enterprise team seats, and official prepaid vouchers. We never distribute cracked tools, illicit credentials, or compromised logins. All seats operate through official vendor onboarding flows.' },
+    { q: 'How quickly will I receive my digital key or invite after payment?', a: 'Over 99.4% of our orders are fulfilled in under 90 seconds. Once your card or crypto transaction finishes network confirmation, your private dashboard instantly populates the activation code and official instructions.' },
+    { q: 'Can I renew my license on the same account next month?', a: 'Yes. Items labeled with "Same Account Renewal" support seamless multi-period continuity without resetting your models, chats, or workspace assets.' },
+    { q: 'What payment methods do you accept?', a: 'We accept Visa, Mastercard, Crypto (BTC, ETH, USDT via TRC-20/ERC-20), and direct SWIFT bank transfers. All transactions are processed through our 256-bit encrypted escrow vault with zero merchant markups.' },
+    { q: 'What happens if my key stops working?', a: 'Our automated monitoring system tracks key health 24/7. If a key is revoked by the upstream provider within your warranty period, you receive an automatic replacement or full wallet credit within minutes — no ticket required.' }
+  ];
+  return `<div class="page-section">
+    <section class="w-full px-4 sm:px-6 py-8 sm:py-12">
+      <div class="max-w-[860px] mx-auto">
+        <div class="text-center mb-8 sm:mb-12">
+          <span class="text-xs text-primary uppercase font-bold tracking-widest block mb-1">Frequently Asked Questions</span>
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight">Trust, Warranty &amp; Fulfillment</h1>
+        </div>
+        <div class="flex flex-col gap-3.5">
+          ${faqs.map(faq => `
+            <details class="group rounded-2xl bg-surface-container border border-white/10 p-4 sm:p-5 transition-all duration-200 open:border-primary/40 open:shadow-[0_8px_24px_rgba(0,0,0,0.6)]">
+              <summary class="w-full flex items-center justify-between text-left cursor-pointer list-none select-none">
+                <span class="text-sm sm:text-base font-bold text-on-surface group-hover:text-primary transition-colors pr-3">${faq.q}</span>
+                <span class="material-symbols-outlined text-primary text-[20px] transition-transform duration-200 faq-icon shrink-0">expand_more</span>
+              </summary>
+              <div class="pt-3 mt-3 text-xs sm:text-sm text-on-surface-variant leading-relaxed border-t border-white/5">${faq.a}</div>
+            </details>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+  </div>`;
+}
+
+function renderAIFinderPage() {
+  return `<div class="page-section">
+    <div class="w-full px-4 sm:px-6 max-w-[1320px] mx-auto pt-4 sm:pt-8 pb-8 sm:pb-12">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+        <div class="flex flex-col max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-primary border border-primary/25 text-[11px] w-fit shadow-[inset_1px_1px_2px_rgba(212,175,55,0.15)] mb-4">
+            <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+            <span class="font-bold tracking-wider uppercase">DETERMINISTIC V4.2 ENGINE • UNBIASED ALGORITHM</span>
+          </div>
+          <h1 class="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight leading-tight">
+            Smart AI & Software <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-tertiary to-primary">Stack Finder</span>
+          </h1>
+          <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">Deterministic, rule-based recommendation engine tailored to your workflow, budget, and platform requirements.</p>
+        </div>
+      </div>
+      <div class="flex flex-col lg:grid lg:grid-cols-12 gap-6 items-start">
+        <!-- Left: Wizard -->
+        <div class="w-full lg:col-span-7 flex flex-col gap-6">
+          <!-- Step Tabs -->
+          <div class="flex items-center p-1.5 rounded-full bg-surface-container-lowest border border-white/10 shadow-[inset_0_3px_6px_rgba(0,0,0,0.8)] gap-1.5 overflow-x-auto w-full">
+            ${['Objective', 'Team', 'Platform', 'Budget'].map((step, i) => `
+              <button class="finder-step-tab flex-1 min-w-[100px] py-2 px-3 rounded-full text-xs font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95 shrink-0 ${i === 0 ? 'bg-gradient-to-r from-primary to-primary-light text-on-primary font-bold shadow-[0_2px_8px_rgba(212,175,55,0.4)]' : 'text-on-surface-variant hover:text-primary'}" onclick="goToFinderStep(${i+1})">
+                <span class="w-5 h-5 rounded-full ${i === 0 ? 'bg-black/25' : 'bg-surface-container'} flex items-center justify-center font-bold text-[10px]">${i+1}</span>
+                <span>${step}</span>
+              </button>
+            `).join('')}
+          </div>
+          <!-- Step Content -->
+          <div class="rounded-2xl bg-surface-container p-5 sm:p-6 border border-primary/20 shadow-[0_16px_32px_rgba(0,0,0,0.7),inset_1px_1px_2px_rgba(212,175,55,0.2)]" id="finder-step-container">
+            <!-- Step 1: Objective (default) -->
+            <div class="finder-step" id="finder-step-1">
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                <div><span class="text-[11px] text-primary uppercase tracking-wider font-bold">Step 01 / 04</span><h2 class="text-lg font-bold text-on-surface mt-1">Select Your Primary Focus</h2></div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                ${[
+                  { id: 'devops', icon: 'code_blocks', title: 'Software & DevOps', desc: 'Autonomous coding agents, CI/CD, and repo search.' },
+                  { id: 'design', icon: 'view_in_ar', title: 'Generative Design & 3D', desc: 'Diffusion fine-tunes, NeRF render engines.' },
+                  { id: 'research', icon: 'menu_book', title: 'Academic Research', desc: 'ArXiv analysis, LaTeX synthesizers, citations.' },
+                  { id: 'media', icon: 'movie_edit', title: 'Video & Media', desc: 'Neural audio, 8K upscalers, script batching.' }
+                ].map((opt, i) => `
+                  <button class="finder-opt group text-left p-4 rounded-xl bg-surface-container-high border ${i === 0 ? 'border-primary/60 ring-1 ring-primary/40' : 'border-white/10'} transition-all hover:-translate-y-1 hover:border-primary/50 active:scale-95 flex flex-col gap-2" data-category="objective" data-value="${opt.id}" onclick="selectFinderOption('objective', '${opt.id}', this)">
+                    <div class="flex items-center justify-between w-full">
+                      <div class="w-10 h-10 rounded-full bg-surface-container border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px]">${opt.icon}</span></div>
+                      <span class="material-symbols-outlined text-[18px] ${i === 0 ? 'text-primary' : 'text-outline'} finder-opt-icon">${i === 0 ? 'check_circle' : 'radio_button_unchecked'}</span>
+                    </div>
+                    <div class="font-semibold text-on-surface group-hover:text-primary transition-colors">${opt.title}</div>
+                    <p class="text-xs text-on-surface-variant">${opt.desc}</p>
+                  </button>
+                `).join('')}
+              </div>
+              <div class="flex justify-end pt-4 mt-4 border-t border-white/10">
+                <button class="px-6 py-2.5 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-xs shadow-[0_8px_20px_rgba(239,68,68,0.5)] active:scale-95 transition-all flex items-center gap-2" onclick="goToFinderStep(2)">Continue: Team <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+              </div>
+            </div>
+            <!-- Step 2: Team -->
+            <div class="finder-step hidden" id="finder-step-2">
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                <div><span class="text-[11px] text-primary uppercase tracking-wider font-bold">Step 02 / 04</span><h2 class="text-lg font-bold text-on-surface mt-1">Team Level & Seat Topology</h2></div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                ${[
+                  { id: 'solo', icon: 'person', title: 'Solo Indie', desc: 'Individual keys, zero SSO overhead.' },
+                  { id: 'early', icon: 'group_work', title: 'Early Stage (2-10)', desc: 'Shared context, team consolidation.' },
+                  { id: 'enterprise', icon: 'corporate_fare', title: 'Enterprise', desc: 'Audit trails, SSO provisioning.' }
+                ].map((opt, i) => `
+                  <button class="finder-opt group text-left p-4 rounded-xl bg-surface-container-high border ${i === 0 ? 'border-primary/60 ring-1 ring-primary/40' : 'border-white/10'} transition-all hover:-translate-y-1 active:scale-95 flex flex-col gap-2" data-category="team" data-value="${opt.id}" onclick="selectFinderOption('team', '${opt.id}', this)">
+                    <div class="flex items-center justify-between w-full">
+                      <div class="w-10 h-10 rounded-full bg-surface-container border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px]">${opt.icon}</span></div>
+                      <span class="material-symbols-outlined text-[18px] ${i === 0 ? 'text-primary' : 'text-outline'} finder-opt-icon">${i === 0 ? 'check_circle' : 'radio_button_unchecked'}</span>
+                    </div>
+                    <div class="font-semibold text-on-surface group-hover:text-primary transition-colors">${opt.title}</div>
+                    <p class="text-xs text-on-surface-variant">${opt.desc}</p>
+                  </button>
+                `).join('')}
+              </div>
+              <div class="flex justify-between pt-4 mt-4 border-t border-white/10 gap-3">
+                <button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant text-xs border border-white/10 active:scale-95 transition-all" onclick="goToFinderStep(1)">Back</button>
+                <button class="px-6 py-2.5 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-xs shadow-[0_8px_20px_rgba(239,68,68,0.5)] active:scale-95 transition-all flex items-center gap-2" onclick="goToFinderStep(3)">Continue: Platform <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+              </div>
+            </div>
+            <!-- Step 3: Platform -->
+            <div class="finder-step hidden" id="finder-step-3">
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                <div><span class="text-[11px] text-primary uppercase tracking-wider font-bold">Step 03 / 04</span><h2 class="text-lg font-bold text-on-surface mt-1">Target Device & Environment</h2></div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                ${[
+                  { id: 'mac', icon: 'laptop_mac', title: 'macOS Apple Silicon' },
+                  { id: 'windows', icon: 'desktop_windows', title: 'Windows Workstation' },
+                  { id: 'linux', icon: 'cloud', title: 'Cloud / Headless Linux' },
+                  { id: 'mobile', icon: 'phone_iphone', title: 'Mobile & iPad First' }
+                ].map((opt, i) => `
+                  <button class="finder-opt group text-left p-4 rounded-xl bg-surface-container-high border ${i === 0 ? 'border-primary/60 ring-1 ring-primary/40' : 'border-white/10'} transition-all hover:-translate-y-1 active:scale-95 flex items-center gap-3" data-category="platform" data-value="${opt.id}" onclick="selectFinderOption('platform', '${opt.id}', this)">
+                    <span class="material-symbols-outlined text-primary text-[24px]">${opt.icon}</span>
+                    <span class="font-semibold text-on-surface group-hover:text-primary transition-colors">${opt.title}</span>
+                    <span class="material-symbols-outlined text-[18px] ${i === 0 ? 'text-primary' : 'text-outline'} finder-opt-icon ml-auto">${i === 0 ? 'check_circle' : 'radio_button_unchecked'}</span>
+                  </button>
+                `).join('')}
+              </div>
+              <div class="flex justify-between pt-4 mt-4 border-t border-white/10 gap-3">
+                <button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant text-xs border border-white/10 active:scale-95 transition-all" onclick="goToFinderStep(2)">Back</button>
+                <button class="px-6 py-2.5 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-xs shadow-[0_8px_20px_rgba(239,68,68,0.5)] active:scale-95 transition-all flex items-center gap-2" onclick="goToFinderStep(4)">Continue: Budget <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+              </div>
+            </div>
+            <!-- Step 4: Budget -->
+            <div class="finder-step hidden" id="finder-step-4">
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                <div><span class="text-[11px] text-primary uppercase tracking-wider font-bold">Step 04 / 04</span><h2 class="text-lg font-bold text-on-surface mt-1">Monthly Operating Capital</h2></div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                ${[
+                  { id: 'tier1', label: 'Lean', range: '$15 - $50/mo' },
+                  { id: 'tier2', label: 'Sweet Spot', range: '$50 - $150/mo' },
+                  { id: 'tier3', label: 'Unlimited', range: '$150+/mo' }
+                ].map((opt, i) => `
+                  <button class="finder-opt group text-left p-4 rounded-xl bg-surface-container-high border ${i === 1 ? 'border-primary/60 ring-1 ring-primary/40' : 'border-white/10'} transition-all hover:-translate-y-1 active:scale-95 flex flex-col gap-2" data-category="budget" data-value="${opt.id}" onclick="selectFinderOption('budget', '${opt.id}', this)">
+                    <div class="flex items-center justify-between w-full">
+                      <span class="px-2 py-0.5 rounded-full ${i === 1 ? 'bg-gradient-to-r from-primary to-primary-light text-on-primary' : 'bg-surface-container text-primary border border-primary/20'} text-[11px] font-bold">${opt.label}</span>
+                      <span class="material-symbols-outlined text-[18px] ${i === 1 ? 'text-primary' : 'text-outline'} finder-opt-icon">${i === 1 ? 'check_circle' : 'radio_button_unchecked'}</span>
+                    </div>
+                    <div class="text-lg font-bold text-on-surface">${opt.range}</div>
+                  </button>
+                `).join('')}
+              </div>
+              <div class="flex justify-between pt-4 mt-4 border-t border-white/10 gap-3">
+                <button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant text-xs border border-white/10 active:scale-95 transition-all" onclick="goToFinderStep(3)">Back</button>
+                <button class="px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-primary-light text-on-primary font-bold text-xs shadow-[0_8px_20px_rgba(212,175,55,0.4)] active:scale-95 transition-all flex items-center gap-2" onclick="recalculateFinderStack()"><span class="material-symbols-outlined text-[16px]">auto_fix_high</span>Recalculate Stack</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right: Results -->
+        <div class="w-full lg:col-span-5 flex flex-col gap-6">
+          <div class="rounded-2xl bg-surface-container p-5 sm:p-6 flex flex-col gap-4 relative overflow-hidden border border-primary/30 shadow-[0_24px_40px_rgba(0,0,0,0.8),inset_1px_1px_2px_rgba(212,175,55,0.3)] glow-card-pulse">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-primary/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+              <div class="flex items-center gap-2"><span class="flex h-2.5 w-2.5 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span><span class="text-[11px] text-primary font-bold tracking-wider uppercase">Optimal Match: 98.4%</span></div>
+            </div>
+            <div>
+              <h3 class="text-xl font-extrabold text-on-surface" id="finder-stack-title">The Modern Developer Stack</h3>
+              <p class="text-sm text-on-surface-variant mt-1" id="finder-stack-subtitle">Cursor Pro + Claude 3.5 Sonnet API + GitHub Copilot Enterprise</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 p-4 rounded-xl bg-surface-container-lowest border border-white/10 shadow-inner">
+              <div class="border-r border-white/10 pr-3"><span class="text-[10px] text-outline uppercase tracking-wider block">MSRP Value</span><span class="text-base text-on-surface-variant line-through" id="finder-msrp">$93.33 /mo</span></div>
+              <div class="text-right pl-3"><span class="text-[10px] text-primary uppercase tracking-wider block">SevenOne Bundle</span><span class="text-lg text-primary font-extrabold" id="finder-price">$57.92 /mo</span></div>
+            </div>
+            <div class="flex flex-col gap-3" id="finder-tools">
+              ${[
+                { code: 'CP', name: 'Cursor Pro Key', price: '$20.00', stock: 14 },
+                { code: 'CL', name: 'Anthropic Tier-3 Token Vault', price: '$27.50', stock: 8 },
+                { code: 'GH', name: 'GitHub Copilot Enterprise', price: '$10.42', stock: 22 }
+              ].map(t => `
+                <div class="p-3 rounded-xl bg-surface-container-high border border-white/10 flex items-center justify-between hover:-translate-y-0.5 hover:border-primary/40 transition-all">
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-surface-container-lowest border border-primary/30 flex items-center justify-center text-primary font-bold text-xs shadow-inner">${t.code}</div>
+                    <div><span class="text-xs font-bold text-on-surface block">${t.name}</span><span class="text-[11px] text-outline">In Stock: ${t.stock} keys</span></div>
+                  </div>
+                  <span class="text-xs font-bold text-on-surface">${t.price}</span>
+                </div>
+              `).join('')}
+            </div>
+            <button class="w-full py-3 rounded-full bg-gradient-to-r from-crimson to-crimson-dark text-white font-bold text-sm shadow-[0_12px_24px_rgba(239,68,68,0.5)] active:scale-95 transition-all flex items-center justify-center gap-2" id="finder-checkout-btn" onclick="finderCheckout()">
+              <span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span>
+              <span>Bundle & Lock 38% Savings ($57.92)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ===== AI FINDER LOGIC =====
+const finderSelections = { objective: 'devops', team: 'solo', platform: 'mac', budget: 'tier2' };
+const finderStacks = {
+  devops: { title: "The Modern Developer Stack", subtitle: "Cursor Pro + Claude 3.5 Sonnet API + GitHub Copilot Enterprise", msrp: "$93.33 /mo", price: "$57.92", savings: "38%", tools: [{ code: "CP", name: "Cursor Pro Key", price: "$20.00", stock: 14 }, { code: "CL", name: "Anthropic Tier-3 Token Vault", price: "$27.50", stock: 8 }, { code: "GH", name: "GitHub Copilot Enterprise", price: "$10.42", stock: 22 }] },
+  design: { title: "The Generative Visual Studio", subtitle: "Midjourney Pro + RunComfy GPU Cluster + Magnific AI Upscaler", msrp: "$120.83 /mo", price: "$74.17", savings: "39%", tools: [{ code: "MJ", name: "Midjourney Pro Stealth", price: "$31.67", stock: 9 }, { code: "RC", name: "RunComfy 100-Hour A100", price: "$26.67", stock: 12 }, { code: "MG", name: "Magnific Pro 2,500 Token", price: "$15.83", stock: 16 }] },
+  research: { title: "Academic & Bio Synthesis Vault", subtitle: "Scite.ai Enterprise + Claude Opus + Overleaf Professional", msrp: "$81.67 /mo", price: "$45.00", savings: "45%", tools: [{ code: "SC", name: "Scite.ai Smart Citations", price: "$15.00", stock: 11 }, { code: "OP", name: "Claude Opus Token Pool", price: "$20.00", stock: 19 }, { code: "OL", name: "Overleaf Pro Collaborator", price: "$10.00", stock: 30 }] },
+  media: { title: "Autonomous Video & Audio Pipeline", subtitle: "ElevenLabs Creator + Runway Gen-3 + Topaz Video AI", msrp: "$140.00 /mo", price: "$82.92", savings: "41%", tools: [{ code: "EL", name: "ElevenLabs Creator 100k", price: "$24.58", stock: 6 }, { code: "RW", name: "RunwayML Gen-3 Alpha", price: "$37.50", stock: 10 }, { code: "TP", name: "Topaz Video AI 5", price: "$20.83", stock: 15 }] }
+};
+
+function initAIFinder() { /* Already initialized via HTML render */ }
+
+function goToFinderStep(step) {
+  document.querySelectorAll('.finder-step').forEach(el => el.classList.add('hidden'));
+  const target = document.getElementById(`finder-step-${step}`);
+  if (target) target.classList.remove('hidden');
+  // Update tabs
+  document.querySelectorAll('.finder-step-tab').forEach((tab, i) => {
+    if (i + 1 === step) {
+      tab.className = 'finder-step-tab flex-1 min-w-[100px] py-2 px-3 rounded-full text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95 shrink-0 bg-gradient-to-r from-primary to-primary-light text-on-primary shadow-[0_2px_8px_rgba(212,175,55,0.4)]';
+      tab.querySelector('span:first-child').className = 'w-5 h-5 rounded-full bg-black/25 flex items-center justify-center font-bold text-[10px]';
+    } else {
+      tab.className = 'finder-step-tab flex-1 min-w-[100px] py-2 px-3 rounded-full text-xs font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95 shrink-0 text-on-surface-variant hover:text-primary';
+      tab.querySelector('span:first-child').className = 'w-5 h-5 rounded-full bg-surface-container flex items-center justify-center font-bold text-[10px] text-outline';
+    }
+  });
+}
+
+function selectFinderOption(category, value, element) {
+  finderSelections[category] = value;
+  const parent = element.parentElement;
+  parent.querySelectorAll('.finder-opt').forEach(btn => {
+    btn.classList.remove('border-primary/60', 'ring-1', 'ring-primary/40');
+    btn.classList.add('border-white/10');
+    const icon = btn.querySelector('.finder-opt-icon');
+    if (icon) { icon.textContent = 'radio_button_unchecked'; icon.className = 'material-symbols-outlined text-[18px] text-outline finder-opt-icon'; }
+  });
+  element.classList.remove('border-white/10');
+  element.classList.add('border-primary/60', 'ring-1', 'ring-primary/40');
+  const activeIcon = element.querySelector('.finder-opt-icon');
+  if (activeIcon) { activeIcon.textContent = 'check_circle'; activeIcon.className = 'material-symbols-outlined text-[18px] text-primary finder-opt-icon'; }
+  recalculateFinderStack();
+}
+
+function recalculateFinderStack() {
+  const data = finderStacks[finderSelections.objective] || finderStacks.devops;
+  const titleEl = document.getElementById('finder-stack-title');
+  const subtitleEl = document.getElementById('finder-stack-subtitle');
+  const msrpEl = document.getElementById('finder-msrp');
+  const priceEl = document.getElementById('finder-price');
+  const toolsEl = document.getElementById('finder-tools');
+  const checkoutEl = document.getElementById('finder-checkout-btn');
+  if (titleEl) titleEl.textContent = data.title;
+  if (subtitleEl) subtitleEl.textContent = data.subtitle;
+  if (msrpEl) msrpEl.textContent = data.msrp;
+  if (priceEl) priceEl.textContent = data.price + ' /mo';
+  if (toolsEl) {
+    toolsEl.innerHTML = data.tools.map(t => `
+      <div class="p-3 rounded-xl bg-surface-container-high border border-white/10 flex items-center justify-between hover:-translate-y-0.5 hover:border-primary/40 transition-all">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-surface-container-lowest border border-primary/30 flex items-center justify-center text-primary font-bold text-xs shadow-inner">${t.code}</div>
+          <div><span class="text-xs font-bold text-on-surface block">${t.name}</span><span class="text-[11px] text-outline">In Stock: ${t.stock} keys</span></div>
+        </div>
+        <span class="text-xs font-bold text-on-surface">${t.price}</span>
+      </div>
+    `).join('');
+  }
+  if (checkoutEl) checkoutEl.innerHTML = `<span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span><span>Bundle & Lock ${data.savings} Savings (${data.price})</span>`;
+}
+
+function finderCheckout() {
+  const btn = document.getElementById('finder-checkout-btn');
+  btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>Securing Vault Escrow...';
+  setTimeout(() => {
+    const data = finderStacks[finderSelections.objective] || finderStacks.devops;
+    data.tools.forEach(t => {
+      const priceNum = parseInt(t.price.replace(/[^0-9]/g, ''), 10);
+      const existing = AppState.cart.find(c => c.id === t.code);
+      if (existing) {
+        existing.qty++;
+      } else {
+        AppState.cart.push({ id: t.code, name: t.name, price: priceNum, warranty: 'Bundle SLA', qty: 1 });
+      }
+    });
+    updateCartBadges();
+    btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span>Keys Transferred to Cart!';
+    btn.classList.remove('from-crimson', 'to-crimson-dark');
+    btn.classList.add('bg-primary', 'text-on-primary');
+    showToast('Bundle added to your cart!');
+  }, 700);
+}
+
+// ===== COUNTDOWN TIMER =====
+let countdownTarget = Date.now() + (2*3600 + 47*60 + 19) * 1000;
+let countdownInterval;
+
+function updateCountdown() {
+  const el = document.getElementById('countdown-timer');
+  if (!el) return;
+  const now = Date.now();
+  let diff = Math.max(0, Math.floor((countdownTarget - now) / 1000));
+  
+  const h = String(Math.floor(diff / 3600)).padStart(2,'0');
+  const m = String(Math.floor((diff % 3600) / 60)).padStart(2,'0');
+  const s = String(diff % 60).padStart(2,'0');
+  el.textContent = `${h}:${m}:${s}`;
+}
+
+if (countdownInterval) clearInterval(countdownInterval);
+countdownInterval = setInterval(updateCountdown, 1000);
+
+// ===== INIT =====
+
+let isFirstAuthCheck = true;
+
+function initApp() {
+  const wbEl = document.getElementById('wallet-balance');
+  if (wbEl) wbEl.textContent = formatPrice(AppState.walletBalance);
+  updateCartBadges();
+  updateCountdown();
+
+  const hash = window.location.hash.replace('#', '') || 'home';
+  if (hash === 'home') {
+    AppState.currentPage = 'home';
+    updateNavStates('home');
+  } else {
+    loadPage(hash, true);
+  }
+}
+
+window.addEventListener('hashchange', handleHashChange);
+
+// Run immediately if DOM is ready, or on DOMContentLoaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
+
+auth.onAuthStateChanged((user) => {
+  currentUser = user;
+  
+  // Update Header Auth Button dynamically
+  const authBtnIcon = document.getElementById('header-auth-icon');
+  const authBtnText = document.getElementById('header-auth-text');
+  if (authBtnIcon && authBtnText) {
+    authBtnIcon.textContent = user ? 'person' : 'login';
+    authBtnText.textContent = user ? 'Account' : 'Login';
+  }
+  
+  // Ensure header/nav visibility is reset to respect CSS responsive breakpoints
+  const mainHeader = document.getElementById('main-header');
+  const mobileNav = document.getElementById('mobile-bottom-nav');
+  if (mainHeader) mainHeader.style.display = '';
+  if (mobileNav) mobileNav.style.display = '';
+  
+  // If the user was on an auth-dependent page like 'account' or 'login', update it
+  if (!isFirstAuthCheck && (AppState.currentPage === 'account' || AppState.currentPage === 'login')) {
+    handleHashChange();
+  }
+  isFirstAuthCheck = false;
+});
+</script>
+
+<script>
+// ===== iOS 26 LIQUID GLASS DYNAMIC REFLECTION TRACKER =====
+document.addEventListener('pointermove', (e) => {
+  const cards = document.querySelectorAll('.product-card-tactile, .liquid-glass-surface');
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const rect = card.getBoundingClientRect();
+    if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    }
+  }
+}, { passive: true });
+</script>
+</body>
+</html>

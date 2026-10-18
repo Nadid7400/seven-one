@@ -1,0 +1,5 @@
+*.py
+embed_home_html.js
+*.ps1
+*.txt
+.playwright-mcp/
